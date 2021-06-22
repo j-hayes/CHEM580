@@ -1,0 +1,113 @@
+Here are a few simple calculations for you to do: 
+
+1. Optimize the geometry of H2O using Hartree-Fock and: 
+
+a. the STO-3G basis set - done
+
+b. the 6-31G basis set - done
+
+c. the 6-31G(D) basis set - done
+
+Be sure to use the correct C2v symmetry and input only the symmetry unique atoms. 
+
+2. Using the final 6-31G(d) geometry calculate the Hessian and examine the output. - done
+
+3. Repeat the above calculations for NH3 using C3v and input only the symmetry unique atoms. 
+
+4. Repeat the above calculations for NH3 using D3h symmetry and explain the difference from number 3 
+
+3a vs 4a
+Same initial coordinates in xyz
+Same Energy
+Same Coordinates
+Similar time to execution. 
+
+
+3b vs 4b
+Same initial coordinates in xyz
+Same Energy
+Same Coordinates
+Similar time to execution. 
+
+
+3c vs 4c
+Same initial coordinates in xyz
+Same Energy
+Same Coordinates
+Similar time to execution. 
+
+3 vs 4 hessian
+
+3
+ DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ A1  =    9     A2  =    0     E   =    6
+
+4
+     DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ A1' =    7     A1" =    0     A2' =    0     A2" =    2     E'' =    1
+ E'  =    5
+
+same:
+  ----------------------------------------------------------------
+     PROPERTY VALUES FOR THE RHF   SELF-CONSISTENT FIELD WAVEFUNCTION
+     ----------------------------------------------------------------
+
+          -----------------
+          ENERGY COMPONENTS
+          -----------------
+
+         WAVEFUNCTION NORMALIZATION =       1.0000000000
+
+                ONE ELECTRON ENERGY =    -100.0797795397
+                TWO ELECTRON ENERGY =      31.7357560754
+           NUCLEAR REPULSION ENERGY =      12.1700382117
+                                      ------------------
+                       TOTAL ENERGY =     -56.1739852526
+
+ ELECTRON-ELECTRON POTENTIAL ENERGY =      31.7357560754
+  NUCLEUS-ELECTRON POTENTIAL ENERGY =    -156.1573442827
+   NUCLEUS-NUCLEUS POTENTIAL ENERGY =      12.1700382117
+                                      ------------------
+             TOTAL POTENTIAL ENERGY =    -112.2515499956
+               TOTAL KINETIC ENERGY =      56.0775647430
+                 VIRIAL RATIO (V/T) =       2.0017194133
+
+3
+
+ -------------------------------
+     THERMOCHEMISTRY AT T=  298.15 K
+     -------------------------------
+
+ THE ROTATIONAL SYMMETRY NUMBER IS  3.0
+
+         E         H         G         CV        CP        S
+           KJ/MOL    KJ/MOL    KJ/MOL   J/MOL-K   J/MOL-K   J/MOL-K
+ ELEC.      0.000     0.000     0.000     0.000     0.000     0.000
+ TRANS.     3.718     6.197   -36.766    12.472    20.786   144.099
+ ROT.       3.718     3.718   -10.334    12.472    12.472    47.133
+ VIB.      92.133    92.133    92.122     0.271     0.271     0.036
+ TOTAL     99.570   102.049    45.022    25.214    33.529   191.268
+ VIB. THERMAL CORRECTION E(T)-E(0) = H(T)-H(0) =         9.651 J/MOL
+
+vs 
+4
+
+ -------------------------------
+     THERMOCHEMISTRY AT T=  298.15 K
+     -------------------------------
+
+ THE ROTATIONAL SYMMETRY NUMBER IS  6.0
+
+              E         H         G         CV        CP        S
+           KJ/MOL    KJ/MOL    KJ/MOL   J/MOL-K   J/MOL-K   J/MOL-K
+ ELEC.      0.000     0.000     0.000     0.000     0.000     0.000
+ TRANS.     3.718     6.197   -36.766    12.472    20.786   144.099
+ ROT.       3.718     3.718    -8.616    12.472    12.472    41.370
+ VIB.      92.133    92.133    92.122     0.271     0.271     0.036
+ TOTAL     99.570   102.049    46.740    25.214    33.529   185.505
+ VIB. THERMAL CORRECTION E(T)-E(0) = H(T)-H(0) =         9.651 J/MOL
+
+higher symmetry of a system implies less entropy, the results of this calculation are consistent with that trend
+3: S Total = 191.268
+4: S Total = 185.505
+

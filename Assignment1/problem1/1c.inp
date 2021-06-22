@@ -1,0 +1,14 @@
+! Assignment 1 from Dr Gordon
+! Optimize H20 geometry with HF, and 6-31G(d) basis set
+! use C2v symmetry 
+!
+ $CONTRL SCFTYP=RHF RUNTYP=OPTIMIZE $END
+ $SYSTEM TIMLIM=1 MEMDDI=1 PARALL=.TRUE. $END
+ $BASIS  GBASIS=N31 NGAUSS=6 NDFUNC=1 $END
+ $DATA
+H20 - 6-31G(d)
+Cnv      2
+
+OXYGEN     8.0
+HYDROGEN   1.0   0.0     0.7572157    0.5865358
+ $END

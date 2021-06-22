@@ -1,0 +1,14 @@
+! Assignment 1 from Dr Gordon
+! Optimize NH3 geometry with HF, and 6-31G(d) basis set
+! use C2v symmetry 
+!
+ $CONTRL SCFTYP=RHF RUNTYP=OPTIMIZE $END
+ $SYSTEM TIMLIM=1 MEMDDI=1 PARALL=.TRUE. $END
+ $BASIS  GBASIS=N31 NGAUSS=6 NDFUNC=1 $END
+ $DATA
+6-31G(d) - NH3
+Cnv      3
+
+NITROGEN   7.0
+HYDROGEN   1.0   1.02000  0.00000    0.00000
+ $END

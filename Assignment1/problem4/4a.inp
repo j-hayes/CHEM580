@@ -1,0 +1,17 @@
+! Assignment 1 from Dr Gordon
+! Optimize NH3 geometry with HF, and STO-3G basis set
+! use D3h symmetry 
+!
+ $CONTRL SCFTYP=RHF RUNTYP=OPTIMIZE $END
+ $SYSTEM TIMLIM=1 MEMDDI=1 PARALL=.TRUE. $END
+ $BASIS  GBASIS=STO NGAUSS=3 $END
+ $DATA
+STO-3G - NH3
+Dnh      3
+
+NITROGEN   7.0
+HYDROGEN   1.0   1.02000  0.00000    0.00000
+ $END
+
+
+

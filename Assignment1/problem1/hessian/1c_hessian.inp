@@ -1,0 +1,14 @@
+! Assignment 1 from Dr Gordon
+! H20 with HF, and 6-31G(d) basis set - hessian run
+! use C2v symmetry 
+!
+ $CONTRL SCFTYP=RHF RUNTYP=HESSIAN $END
+ $SYSTEM TIMLIM=1 MEMDDI=1 PARALL=.TRUE. $END
+ $BASIS  GBASIS=N31 NGAUSS=6 NDFUNC=1 $END
+ $DATA
+H20 - 6-31G(d) - hessian
+Cnv      2
+
+OXYGEN      8.0  -0.0000000000   0.0000000000   0.0087569991
+HYDROGEN    1.0   0.0000000000   0.7540706959   0.5821573005
+ $END
