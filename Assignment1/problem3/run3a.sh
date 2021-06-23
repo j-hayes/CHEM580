@@ -1,4 +1,4 @@
 #!/bin/csh
 
-~/Source/gamess/rungms 2a 01 1  >&  2a.log
+~/Source/gamess/rungms 3a 01 1  >&  3a.log
 

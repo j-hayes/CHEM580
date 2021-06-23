@@ -1,9 +1,9 @@
 ----- GAMESS execution script 'rungms' -----
 This job is running on host jackson-Z97X-UD3H-BK
-under operating system Linux at Mon 21 Jun 2021 10:40:02 AM CDT
+under operating system Linux at Wed 23 Jun 2021 11:01:40 AM CDT
 Available scratch disk space (Kbyte units) at beginning of the job is
 Filesystem     1K-blocks     Used Available Use% Mounted on
-/dev/sda2      114337956 62779336  45707484  58% /
+/dev/sda2      114337956 62150632  46336188  58% /
 GAMESS temporary binary files will be written to /home/jackson/Source/GamessRuns
 GAMESS supplementary output files will be written to /home/jackson/Source/gamess/GamessRunsOutput
 Copying input file ./1c.inp to your run's scratch directory...
@@ -109,18 +109,17 @@ unset echo
      JORGE LUIS GALVEZ VALLEJO (WEBSITE ADMINISTRATOR),
      PENG XU
 
- EXECUTION OF GAMESS BEGUN 10:40:02 21-JUN-2021    
+ EXECUTION OF GAMESS BEGUN 11:01:40 23-JUN-2021    
 
             ECHO OF THE FIRST FEW INPUT CARDS -
  INPUT CARD>! Assignment 1 from Dr Gordon                                                   
- INPUT CARD>! Optimize H20 geometry with HF, and STO-3G basis set                           
+ INPUT CARD>! Optimize H20 geometry with HF, and 6-31G(d) basis set                         
  INPUT CARD>! use C2v symmetry                                                              
  INPUT CARD>!                                                                               
  INPUT CARD> $CONTRL SCFTYP=RHF RUNTYP=OPTIMIZE $END                                        
- INPUT CARD> $SYSTEM TIMLIM=1 MEMDDI=1 PARALL=.TRUE. $END                                   
  INPUT CARD> $BASIS  GBASIS=N31 NGAUSS=6 NDFUNC=1 $END                                      
  INPUT CARD> $DATA                                                                          
- INPUT CARD>6-31G(d)                                                                        
+ INPUT CARD>H20 - 6-31G(d)                                                                  
  INPUT CARD>Cnv      2                                                                      
  INPUT CARD>                                                                                
  INPUT CARD>OXYGEN     8.0                                                                  
@@ -137,7 +136,7 @@ unset echo
 
      RUN TITLE
      ---------
- 6-31G(d)                                                                        
+ H20 - 6-31G(d)                                                                  
 
  THE POINT GROUP OF THE MOLECULE IS CNV     
  THE ORDER OF THE PRINCIPAL AXIS IS     2
@@ -218,11 +217,11 @@ unset echo
      $SYSTEM OPTIONS
      ---------------
   REPLICATED MEMORY=     1000000 WORDS (ON EVERY NODE).
- DISTRIBUTED MEMDDI=           1 MILLION WORDS IN AGGREGATE,
- MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS     1000000 WORDS/PROCESSOR.
- TOTAL MEMORY REQUESTED ON EACH PROCESSOR=     2000000 WORDS.
- TIMLIM=           1.00 MINUTES, OR       0.0 DAYS.
- PARALL= T  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ DISTRIBUTED MEMDDI=           0 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS           0 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=     1000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
  MXSEQ2=     300 MXSEQ3=     150  mem10=         0  mem22=         0
 
  Using Gaussians for PCM contribution to MEP, params: 0.10000E+01 0.10000E-07
@@ -261,8 +260,8 @@ unset echo
  A1  =   10     A2  =    1     B1  =    3     B2  =    5
 
  ..... DONE SETTING UP THE RUN .....
- CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.37%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.64%
 
 
           -----------------------------
@@ -305,8 +304,8 @@ unset echo
           1 ELECTRON INTEGRALS
           ********************
  ...... END OF ONE-ELECTRON INTEGRALS ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.42%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.65%
 
           -------------
           GUESS OPTIONS
@@ -324,8 +323,8 @@ unset echo
      2=A1       3=B2       4=A1       5=B1       6=B2       7=A1       8=A1  
      9=A1      10=A1      11=A1      12=A1      13=A1      14=A2      15=B1  
  ...... END OF INITIAL ORBITAL SELECTION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.33%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.66%
 
                     ----------------------
                     AO INTEGRAL TECHNOLOGY
@@ -358,8 +357,8 @@ unset echo
  TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                4469
           1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
   ...... END OF TWO-ELECTRON INTEGRALS .....
- CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.71%
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.63%
 
           --------------------------
                  RHF SCF CALCULATION
@@ -489,8 +488,8 @@ unset echo
    18  H  3  S   -0.000000  -0.840634  -0.951935   0.128372
    19  H  3  S   -0.000000  -0.141687   0.038575  -0.545226
  ...... END OF RHF CALCULATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.82%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.67%
 
      ----------------------------------------------------------------
      PROPERTY VALUES FOR THE RHF   SELF-CONSISTENT FIELD WAVEFUNCTION
@@ -607,13 +606,13 @@ unset echo
          DX          DY          DZ         /D/  (DEBYE)
     -0.000000    0.000000    2.226112    2.226112
  ...... END OF PROPERTY EVALUATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.55%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.68%
 
  BEGINNING ONE ELECTRON GRADIENT...
  ..... END OF 1-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.60%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.69%
 
           ----------------------
           GRADIENT OF THE ENERGY
@@ -624,8 +623,8 @@ unset echo
  THE COARSE/FINE SCHWARZ SCREENINGS SKIPPED            0/           0 BLOCKS.
  THE NUMBER OF GRADIENT INTEGRAL BLOCKS COMPUTED WAS       317
  ...... END OF 2-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.70%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.71%
 
           NSERCH=  0     ENERGY=     -76.0105035
 
@@ -673,13 +672,13 @@ unset echo
   * ... LESS THAN  3.000
 
  ...... END OF ONE-ELECTRON INTEGRALS ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.72%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.71%
  TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                4469
           1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
   ...... END OF TWO-ELECTRON INTEGRALS .....
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.78%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.54%
 
           --------------------------
                  RHF SCF CALCULATION
@@ -704,14 +703,14 @@ unset echo
 
  FINAL RHF ENERGY IS      -76.0102846870 AFTER   7 ITERATIONS
  ...... END OF RHF CALCULATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.84%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.57%
  ..... END OF 1-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.54%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.48%
  ...... END OF 2-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.61%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.51%
 
           NSERCH=  1     ENERGY=     -76.0102847
 
@@ -763,13 +762,13 @@ unset echo
   * ... LESS THAN  3.000
 
  ...... END OF ONE-ELECTRON INTEGRALS ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.62%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.52%
  TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                4469
           1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
   ...... END OF TWO-ELECTRON INTEGRALS .....
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.68%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.54%
 
           --------------------------
                  RHF SCF CALCULATION
@@ -794,14 +793,14 @@ unset echo
 
  FINAL RHF ENERGY IS      -76.0107406543 AFTER   7 ITERATIONS
  ...... END OF RHF CALCULATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.73%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.56%
  ..... END OF 1-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.75%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.56%
  ...... END OF 2-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.81%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.58%
 
           NSERCH=  2     ENERGY=     -76.0107407
 
@@ -851,13 +850,13 @@ unset echo
   * ... LESS THAN  3.000
 
  ...... END OF ONE-ELECTRON INTEGRALS ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.82%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.57%
  TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                4469
           1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
   ...... END OF TWO-ELECTRON INTEGRALS .....
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.86%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.59%
 
           --------------------------
                  RHF SCF CALCULATION
@@ -881,14 +880,14 @@ unset echo
 
  FINAL RHF ENERGY IS      -76.0107464128 AFTER   6 ITERATIONS
  ...... END OF RHF CALCULATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.90%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.60%
  ..... END OF 1-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.90%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.61%
  ...... END OF 2-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.95%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.62%
 
           NSERCH=  3     ENERGY=     -76.0107464
 
@@ -938,13 +937,13 @@ unset echo
   * ... LESS THAN  3.000
 
  ...... END OF ONE-ELECTRON INTEGRALS ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.95%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.62%
  TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                4469
           1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
   ...... END OF TWO-ELECTRON INTEGRALS .....
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.98%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.56%
 
           --------------------------
                  RHF SCF CALCULATION
@@ -966,14 +965,14 @@ unset echo
 
  FINAL RHF ENERGY IS      -76.0107464914 AFTER   4 ITERATIONS
  ...... END OF RHF CALCULATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.01%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.57%
  ..... END OF 1-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.02%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.57%
  ...... END OF 2-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.06%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.57%
 
           NSERCH=  4     ENERGY=     -76.0107465
 
@@ -1023,13 +1022,13 @@ unset echo
   * ... LESS THAN  3.000
 
  ...... END OF ONE-ELECTRON INTEGRALS ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.06%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.58%
  TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                4469
           1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
   ...... END OF TWO-ELECTRON INTEGRALS .....
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.09%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.59%
 
           --------------------------
                  RHF SCF CALCULATION
@@ -1051,14 +1050,14 @@ unset echo
 
  FINAL RHF ENERGY IS      -76.0107465155 AFTER   4 ITERATIONS
  ...... END OF RHF CALCULATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.10%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.54%
  ..... END OF 1-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.11%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.55%
  ...... END OF 2-ELECTRON GRADIENT ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.14%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.56%
 
           NSERCH=  5     ENERGY=     -76.0107465
 
@@ -1293,34 +1292,34 @@ unset echo
          DX          DY          DZ         /D/  (DEBYE)
     -0.000000    0.000000    2.198888    2.198888
  ...... END OF PROPERTY EVALUATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.17%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.58%
   $VIB   
           IVIB=   0 IATOM=   0 ICOORD=   0 E=      -76.0107465155
   0.000000000E+00 0.000000000E+00 4.380942162E-06 0.000000000E+00-3.048666721E-07
  -2.190471098E-06 0.000000000E+00 3.048666721E-07-2.190471098E-06
  -1.331320052E-16 0.000000000E+00 2.198888031E+00
  ......END OF GEOMETRY SEARCH......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.18%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.58%
                997739  WORDS OF DYNAMIC MEMORY USED
- EXECUTION OF GAMESS TERMINATED NORMALLY 10:40:02 21-JUN-2021    
+ EXECUTION OF GAMESS TERMINATED NORMALLY 11:01:40 23-JUN-2021    
  DDI: 263640 bytes (0.3 MB / 0 MWords) used by master data server.
 
  ----------------------------------------
  CPU timing information for all processes
  ========================================
- 0: 0.47 + 0.00 = 0.47
+ 0: 0.43 + 0.04 = 0.48
  ----------------------------------------
  ddikick.x: exited gracefully.
 unset echo
 ----- accounting info -----
 Files used on the master node jackson-Z97X-UD3H-BK were:
--rw-rw-r-- 1 jackson jackson     332 Jun 21 10:40 /home/jackson/Source/GamessRuns/1c.F05
--rw-rw-r-- 1 jackson jackson  180016 Jun 21 10:40 /home/jackson/Source/GamessRuns/1c.F08
--rw-rw-r-- 1 jackson jackson 1668720 Jun 21 10:40 /home/jackson/Source/GamessRuns/1c.F10
+-rw-rw-r-- 1 jackson jackson     294 Jun 23 11:01 /home/jackson/Source/GamessRuns/1c.F05
+-rw-rw-r-- 1 jackson jackson  180016 Jun 23 11:01 /home/jackson/Source/GamessRuns/1c.F08
+-rw-rw-r-- 1 jackson jackson 1668720 Jun 23 11:01 /home/jackson/Source/GamessRuns/1c.F10
 ls: No match.
 ls: No match.
 ls: No match.
-Mon 21 Jun 2021 10:40:05 AM CDT
-0.1u 0.1s 0:03.29 6.9% 0+0k 0+32io 0pf+0w
+Wed 23 Jun 2021 11:01:43 AM CDT
+0.1u 0.1s 0:03.29 6.9% 0+0k 0+16io 0pf+0w

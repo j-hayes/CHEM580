@@ -1,9 +1,9 @@
 ----- GAMESS execution script 'rungms' -----
 This job is running on host jackson-Z97X-UD3H-BK
-under operating system Linux at Mon 21 Jun 2021 01:22:41 PM CDT
+under operating system Linux at Wed 23 Jun 2021 11:08:31 AM CDT
 Available scratch disk space (Kbyte units) at beginning of the job is
 Filesystem     1K-blocks     Used Available Use% Mounted on
-/dev/sda2      114337956 62843552  45643268  58% /
+/dev/sda2      114337956 62158016  46328804  58% /
 GAMESS temporary binary files will be written to /home/jackson/Source/GamessRuns
 GAMESS supplementary output files will be written to /home/jackson/Source/gamess/GamessRunsOutput
 Copying input file ./1c_hessian.inp to your run's scratch directory...
@@ -109,7 +109,7 @@ unset echo
      JORGE LUIS GALVEZ VALLEJO (WEBSITE ADMINISTRATOR),
      PENG XU
 
- EXECUTION OF GAMESS BEGUN 13:22:41 21-JUN-2021    
+ EXECUTION OF GAMESS BEGUN 11:08:31 23-JUN-2021    
 
             ECHO OF THE FIRST FEW INPUT CARDS -
  INPUT CARD>! Assignment 1 from Dr Gordon                                                   
@@ -117,7 +117,6 @@ unset echo
  INPUT CARD>! use C2v symmetry                                                              
  INPUT CARD>!                                                                               
  INPUT CARD> $CONTRL SCFTYP=RHF RUNTYP=HESSIAN $END                                         
- INPUT CARD> $SYSTEM TIMLIM=1 MEMDDI=1 PARALL=.TRUE. $END                                   
  INPUT CARD> $BASIS  GBASIS=N31 NGAUSS=6 NDFUNC=1 $END                                      
  INPUT CARD> $DATA                                                                          
  INPUT CARD>H20 - 6-31G(d) - hessian                                                        
@@ -126,6 +125,7 @@ unset echo
  INPUT CARD>OXYGEN      8.0  -0.0000000000   0.0000000000   0.0087569991                    
  INPUT CARD>HYDROGEN    1.0   0.0000000000   0.7540706959   0.5821573005                    
  INPUT CARD> $END                                                                           
+ INPUT CARD> $ZMAT   IZMAT(1)=1,1,2,   1,1,3,   2,2,1,3  $END                               
     1000000 WORDS OF MEMORY AVAILABLE
 
      BASIS OPTIONS
@@ -218,11 +218,11 @@ unset echo
      $SYSTEM OPTIONS
      ---------------
   REPLICATED MEMORY=     1000000 WORDS (ON EVERY NODE).
- DISTRIBUTED MEMDDI=           1 MILLION WORDS IN AGGREGATE,
- MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS     1000000 WORDS/PROCESSOR.
- TOTAL MEMORY REQUESTED ON EACH PROCESSOR=     2000000 WORDS.
- TIMLIM=           1.00 MINUTES, OR       0.0 DAYS.
- PARALL= T  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ DISTRIBUTED MEMDDI=           0 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS           0 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=     1000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
  MXSEQ2=     300 MXSEQ3=     150  mem10=         0  mem22=         0
 
  Using Gaussians for PCM contribution to MEP, params: 0.10000E+01 0.10000E-07
@@ -261,8 +261,8 @@ unset echo
  A1  =   10     A2  =    1     B1  =    3     B2  =    5
 
  ..... DONE SETTING UP THE RUN .....
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS   100.00%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    95.85%
 
      ---------------------------------
      HESSIAN MATRIX CONTROL PARAMETERS
@@ -287,8 +287,8 @@ unset echo
           1 ELECTRON INTEGRALS
           ********************
  ...... END OF ONE-ELECTRON INTEGRALS ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS   100.00%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    96.13%
 
           -------------
           GUESS OPTIONS
@@ -306,8 +306,8 @@ unset echo
      2=A1       3=B2       4=A1       5=B1       6=B2       7=A1       8=A1  
      9=A1      10=A1      11=A1      12=A1      13=A1      14=A2      15=B1  
  ...... END OF INITIAL ORBITAL SELECTION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.99%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    96.47%
 
                     ----------------------
                     AO INTEGRAL TECHNOLOGY
@@ -340,8 +340,8 @@ unset echo
  TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                4469
           1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
   ...... END OF TWO-ELECTRON INTEGRALS .....
- CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.96%
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.36%
 
           --------------------------
                  RHF SCF CALCULATION
@@ -471,8 +471,8 @@ unset echo
    18  H  3  S   -0.000000  -0.859063  -0.976454   0.136821
    19  H  3  S   -0.000000  -0.147153   0.025137  -0.555664
  ...... END OF RHF CALCULATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.97%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.57%
 
      ----------------------------------------------------------------
      PROPERTY VALUES FOR THE RHF   SELF-CONSISTENT FIELD WAVEFUNCTION
@@ -589,8 +589,8 @@ unset echo
          DX          DY          DZ         /D/  (DEBYE)
     -0.000000    0.000000    2.198888    2.198888
  ...... END OF PROPERTY EVALUATION ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.07%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    90.69%
 
  REGENERATING AO INTEGRAL LIST IN C1 POINT GROUP FOR AO-DRIVEN CPHF
 
@@ -612,15 +612,15 @@ unset echo
  TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                7563
           1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
   ...... END OF TWO-ELECTRON INTEGRALS .....
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.13%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    90.08%
 
      ---------------------------------------------
      1ST AND 2ND INTEGRAL DERIVATIVE CONTRIBUTIONS
      ---------------------------------------------
  ...... END OF 1-ELECTRON GRAD+HESS+FOCKDER ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.19%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    90.81%
 
      ----------------------------------------------
      TWO ELECTRON INTEGRAL DERIVATIVE CONTRIBUTIONS
@@ -629,11 +629,11 @@ unset echo
       10715 WORDS REQUIRED,    999999 WORDS AVAILABLE
  THE COARSE/FINE SCHWARZ SCREENINGS SKIPPED          0/         0 BLOCKS.
  THE NUMBER OF DERIVATIVE INTEGRAL BLOCKS COMPUTED WAS       317
- CPU     0: STEP CPU TIME=     0.02 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.51%
+ STEP CPU TIME =     0.02 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    93.63%
  ...... END OF 2-ELECTRON GRAD+HESS+FOCKDER ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.51%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    93.63%
 
      -------------------------------------------
      COUPLED-PERTURBED CLOSED SHELL HARTREE-FOCK
@@ -661,8 +661,8 @@ unset echo
  IT REQUIRED    39 FOCK-LIKE BUILDS TO FIND THE   6 SYMMETRY UNIQUE RESPONSES.
         TIME FOR -YA-   =        0.002
  ...... DONE WITH CPHF CONTRIBUTIONS ......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.52%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    93.97%
 
           ---------------
           ENERGY GRADIENT
@@ -845,27 +845,27 @@ unset echo
  TOTAL     16.197    16.789     3.376     5.985     7.972    44.987
  VIB. THERMAL CORRECTION E(T)-E(0) = H(T)-H(0) =         0.776 CAL/MOL
  ......END OF NORMAL COORDINATE ANALYSIS......
- CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
- TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.53%
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    94.04%
                580000  WORDS OF DYNAMIC MEMORY USED
- EXECUTION OF GAMESS TERMINATED NORMALLY 13:22:41 21-JUN-2021    
+ EXECUTION OF GAMESS TERMINATED NORMALLY 11:08:31 23-JUN-2021    
  DDI: 263640 bytes (0.3 MB / 0 MWords) used by master data server.
 
  ----------------------------------------
  CPU timing information for all processes
  ========================================
- 0: 0.47 + 0.00 = 0.48
+ 0: 0.39 + 0.05 = 0.45
  ----------------------------------------
  ddikick.x: exited gracefully.
 unset echo
 ----- accounting info -----
 Files used on the master node jackson-Z97X-UD3H-BK were:
--rw-rw-r-- 1 jackson jackson     404 Jun 21 13:22 /home/jackson/Source/GamessRuns/1c_hessian.F05
--rw-rw-r-- 1 jackson jackson  180016 Jun 21 13:22 /home/jackson/Source/GamessRuns/1c_hessian.F08
--rw-rw-r-- 1 jackson jackson 1865040 Jun 21 13:22 /home/jackson/Source/GamessRuns/1c_hessian.F10
--rw-rw-r-- 1 jackson jackson   13752 Jun 21 13:22 /home/jackson/Source/GamessRuns/1c_hessian.F18
+-rw-rw-r-- 1 jackson jackson     408 Jun 23 11:08 /home/jackson/Source/GamessRuns/1c_hessian.F05
+-rw-rw-r-- 1 jackson jackson  180016 Jun 23 11:08 /home/jackson/Source/GamessRuns/1c_hessian.F08
+-rw-rw-r-- 1 jackson jackson 1865040 Jun 23 11:08 /home/jackson/Source/GamessRuns/1c_hessian.F10
+-rw-rw-r-- 1 jackson jackson   13752 Jun 23 11:08 /home/jackson/Source/GamessRuns/1c_hessian.F18
 ls: No match.
 ls: No match.
 ls: No match.
-Mon 21 Jun 2021 01:22:44 PM CDT
-0.1u 0.0s 0:03.29 6.9% 0+0k 0+24io 0pf+0w
+Wed 23 Jun 2021 11:08:34 AM CDT
+0.1u 0.0s 0:03.30 6.9% 0+0k 0+24io 0pf+0w
