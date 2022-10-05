@@ -1,0 +1,3502 @@
+No scheduler so we must be running locally on jackson-t-ripper
+Input file supplied : /home/jackson/chem_580_gamess/msn-project/gas-molecules/CO2/CO2-makefp.inp
+----- GAMESS execution script 'rungms-dev' -----
+This job is running on host jackson-t-ripper
+under operating system Linux at Wed 05 Oct 2022 02:17:18 PM CDT with sockets communication mode
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem     1K-blocks      Used Available Use% Mounted on
+/dev/nvme0n1p2 490617784 223999284 241623020  49% /
+GAMESS temporary binary files will be written to /home/jackson/chem_580_gamess/scratch
+GAMESS supplementary output files will be written to /home/jackson/restart
+Copying input file CO2-makefp.inp to your run's scratch directory...
+ 
+Assuming a single but multicore node.
+ 
+The generated host list is
+jackson-t-ripper:cpus=16
+-----debug-----
+the execution path is
+/home/jackson/gems/bin /home/jackson/tools/ovito/bin /home/jackson/tools/packmol /opt/nvidia/hpc_sdk/Linux_x86_64/22.1/comm_libs/mpi/bin /opt/nvidia/hpc_sdk/Linux_x86_64/22.1/compilers/bin /usr/local/cuda-11.6/bin /opt/intel/oneapi/vtune/2021.7.1/bin64 /opt/intel/oneapi/vpl/2021.6.0/bin /opt/intel/oneapi/mpi/2021.4.0/libfabric/bin /opt/intel/oneapi/mpi/2021.4.0/bin /opt/intel/oneapi/mkl/2021.4.0/bin/intel64 /opt/intel/oneapi/itac/2021.4.0/bin /home/jackson/anaconda3/bin /opt/intel/oneapi/intelpython/latest/condabin /opt/intel/oneapi/inspector/2021.4.0/bin64 /opt/intel/oneapi/dpcpp-ct/2021.4.0/bin /opt/intel/oneapi/dev-utilities/2021.4.0/bin /opt/intel/oneapi/debugger/10.2.4/gdb/intel64/bin /opt/intel/oneapi/compiler/2021.4.0/linux/lib/oclfpga/llvm/aocl-bin /opt/intel/oneapi/compiler/2021.4.0/linux/lib/oclfpga/bin /opt/intel/oneapi/compiler/2021.4.0/linux/bin/intel64 /opt/intel/oneapi/compiler/2021.4.0/linux/bin /opt/intel/oneapi/clck/2021.4.0/bin/intel64 /opt/intel/oneapi/advisor/2021.4.0/bin64 /home/jackson/.local/bin /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games /snap/bin /home/jackson/.dotnet/tools /opt/julia-1.6.6/bin
+the library path is
+/usr/local/cuda-11.6/lib64:/opt/intel/oneapi/vpl/2021.6.0/lib:/opt/intel/oneapi/tbb/2021.4.0/env/../lib/intel64/gcc4.8:/opt/intel/oneapi/mpi/2021.4.0//libfabric/lib:/opt/intel/oneapi/mpi/2021.4.0//lib/release:/opt/intel/oneapi/mpi/2021.4.0//lib:/opt/intel/oneapi/mkl/2021.4.0/lib/intel64:/opt/intel/oneapi/itac/2021.4.0/slib:/opt/intel/oneapi/ipp/2021.4.0/lib/intel64:/opt/intel/oneapi/ippcp/2021.4.0/lib/intel64:/opt/intel/oneapi/ipp/2021.4.0/lib/intel64:/opt/intel/oneapi/dnnl/2021.4.0/cpu_dpcpp_gpu_dpcpp/lib:/opt/intel/oneapi/debugger/10.2.4/gdb/intel64/lib:/opt/intel/oneapi/debugger/10.2.4/libipt/intel64/lib:/opt/intel/oneapi/debugger/10.2.4/dep/lib:/opt/intel/oneapi/dal/2021.4.0/lib/intel64:/opt/intel/oneapi/compiler/2021.4.0/linux/lib:/opt/intel/oneapi/compiler/2021.4.0/linux/lib/x64:/opt/intel/oneapi/compiler/2021.4.0/linux/lib/emu:/opt/intel/oneapi/compiler/2021.4.0/linux/lib/oclfpga/host/linux64/lib:/opt/intel/oneapi/compiler/2021.4.0/linux/lib/oclfpga/linux64/lib:/opt/intel/oneapi/compiler/2021.4.0/linux/compiler/lib/intel64_lin:/opt/intel/oneapi/ccl/2021.4.0/lib/cpu_gpu_dpcpp
+The dynamically linked libraries for this binary are
+/home/jackson/chem_580_gamess/gamess.00.x :
+	linux-vdso.so.1 (0x00007ffc9fcf5000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f5e0841c000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f5e083f9000)
+	libgfortran.so.5 => /lib/x86_64-linux-gnu/libgfortran.so.5 (0x00007f5e08131000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f5e07fe0000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f5e07fc5000)
+	libquadmath.so.0 => /lib/x86_64-linux-gnu/libquadmath.so.0 (0x00007f5e07f7b000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f5e07d89000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f5e7af4c000)
+--------------
+
+ Distributed Data Interface kickoff program.
+ Initiating 16 compute processes on 1 nodes to run the following command:
+ /home/jackson/chem_580_gamess/gamess.00.x CO2-makefp 
+
+          *******************************************************
+          *                                                     *
+          *          GAMESS VERSION = 31 JUL 2022 (R1)          *
+          *                                                     *
+          *              doi.org/10.1063/5.0005188              *
+          *                                                     *
+          **************** 64 BIT LINUX VERSION *****************
+ 
+           git commit: 22895c96d491ae52f73de26ff8edf9b0b1659109
+ 
+
+  GAMESS HAS BEEN MADE POSSIBLE WITH IMPORTANT CONTRIBUTIONS FROM
+  THE FOLLOWING INDIVIDUALS (IN ALPHABETICAL ORDER):
+
+     IVANA ADAMOVIC, CHRISTINE AIKENS, TOMOKO AKAMA,
+     MELISA ALKAN, YURI ALEXEEV, YURIKO AOKI, POOJA ARORA,
+     TOSHIO ASADA, ANDREY ASADCHEV, KIM K. BALDRIDGE,
+     PRADIPTA BANDYOPADHYAY, TAYLOR A. BARNES, MARIA BARYSZ,
+     ROB BELL, JONATHAN BENTZ, COLLEEN BERTONI,
+     JERRY A. BOATZ, BRETT BODE, KURT BRORSEN, KURT R. BRORSEN,
+     LAIMUTIS BYTAUTAS, CALEB CARLIN, LAURA CARRINGTON,
+     GALINA CHABAN, BENOIT CHAMPAGNE, WEI CHEN, MAHITO CHIBA,
+     DAN CHIPMAN, CHEOL HO CHOI, TANNER CULPITT,
+     DIPAYAN DATTA, PAUL DAY, ALBERT DEFUSCO,
+     NUWAN DESILVA, J. EMILIANO DEUSTUA,
+     TIM DUDLEY, MICHEL DUPUIS, STEVEN T. ELBERT,
+     DMITRI FEDOROV, KATHERINE FERRERAS, MICHAEL FILATOV,
+     ALEX FINDLATER,GRAHAM FLETCHER, MARK FREITAG,
+     CHRISTIAN FRIEDL, DAVID GARMER, 
+     IGOR S. GERASIMOV, KURT GLAESEMANN,
+     MARK S. GORDON, JEFFREY GOUR, FENG LONG GU,
+     EMILIE B. GUIDEZ, ANASTASIA GUNINA, SHARON HAMMES-SCHIFFER,
+     MASATAKE HARUTA, KIMIHIKO HIRAO, YASUHIRO IKABATA,
+     TZVETELIN IORDANOV, STEPHAN IRLE, KAZUYA ISHIMURA,
+     JOE IVANIC, FRANK JENSEN, JAN H. JENSEN, VISVALDAS KAIRYS,
+     MUNEAKI KAMIYA, MICHIO KATOUDA, NAOAKI KAWAKAMI, DAN KEMP,
+     BERNARD KIRTMAN, KAZUO KITAURA, MARIUSZ KLOBUKOWSKI,
+     MASATO KOBAYASHI, KONSTANTIN KOMAROV, PRAKASHAN KORAMBATH,
+     JACEK KORCHOWIEC, SHIRO KOSEKI, KAROL KOWALSKI,
+     JIMMY KROMANN, STANISLAW KUCHARSKI, HENRY KURTZ,
+     SAROM SOK LEANG, SEUNGHOON LEE, HUI LI, SHUHUA LI, WEI LI,
+     JESSE LUTZ, ALEKSANDR O. LYKHIN, MARCIN MAKOWSKI,
+     JOANI MATO, NIKITA MATSUNAGA, BENEDETTA MENNUCCI,
+     GRANT MERRILL, NORIYUKI MINEZAWA, VLADIMIR MIRONOV,
+     EISAKU MIYOSHI, JOHN A. MONTGOMERY JR., HIROTOSHI MORI,
+     JONATHAN MULLIN, MONIKA MUSIAL, SHIGERU NAGASE,
+     TAKESHI NAGATA, HIROMI NAKAI, TAKAHITO NAKAJIMA,
+     YUYA NAKAJIMA, HARUYUKI NAKANO, HIROYA NAKATA, SEAN NEDD,
+     HEATHER NETZLOFF, KIET A. NGUYEN, YOSHIO NISHIMOTO,
+     BOSILJKA NJEGIC, RYAN OLSON, MIKE PAK, ROBERTO PEVERATI,
+     BUU PHAM, PIOTR PIECUCH, ANNA POMOGAEVA, DAVID POOLE,
+     SPENCER PRUITT, OLIVIER QUINET, LUKE ROSKOP,
+     KLAUS RUEDENBERG, ANDREW SAND, TOSAPORN SATTASATHUCHANA,
+     NOZOMI SAWADA, MICHAEL W. SCHMIDT, PATRICK E. SCHNEIDER,
+     JUNJI SEINO, PRACHI SHARMA, JUN SHEN, JIM SHOEMAKER,
+     YINAN SHU, DEJUN SI, JONATHAN SKONE, LYUDMILA SLIPCHENKO,
+     TONY SMITH, JIE SONG, MARK SPACKMAN, CASPER STEINMANN,
+     WALT STEVENS, PEIFENG SU, SHUJUN SU, CHET SWALINA,
+     CHINAMI TAKASHIMA, TETSUYA TAKETSUGU, ZHEN TAO,
+     NANDUN THELLAMUREGE, SEIKEN TOKURA, JACOPO TOMASI,
+     TSUGUKI TOUMA, TAKAO TSUNEDA, HIROAKI UMEDA,
+     JORGE LUIS GALVEZ VALLEJO, YALI WANG, SIMON WEBB,
+     AARON WEST, THERESA L. WINDUS, MARTA WLOCH,
+     PENG XU, KIYOSHI YAGI, SUSUMU YANAGISAWA, YANG YANG,
+     SOOHAENG YOO, TAKESHI YOSHIKAWA, FEDERICO ZAHARIEV,
+     TOBY ZENG
+
+  WHO ARE SUPPORTED BY THEIR INSTITUTION/UNIVERSITY/COMPANY/GROUP
+  (IN ALPHABETICAL ORDER):
+
+     EP ANALYTICS,
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX,
+     INSTITUTE FOR MOLECULAR SCIENCE, IOWA STATE UNIVERSITY,
+     JACKSON STATE UNIVERSITY, JOHANNES KEPLER UNIVERSITY LINZ,
+     KYUNGPOOK NATIONAL UNIVERSITY
+     KYUSHU UNIVERSITY, MICHIGAN STATE UNIVERSITY,
+     MIE UNIVERSITY, THE MOLECULAR SCIENCES SOFTWARE INSTITUTE,
+     MOSCOW STATE UNIVERSITY,
+     N. COPERNICUS UNIVERSITY, NAGOYA UNIVERSITY,
+     NANJING UNIVERSITY, NAT. INST. OF ADVANCED INDUSTRIAL
+     SCIENCE AND TECHNOLOGY, NATIONAL INST. OF STANDARDS AND
+     TECHNOLOGY, NESMEYANOV INSTITUTE OF ORGANOELEMENT COMPOUNDS
+     OF RUSSIAN ACADEMY OF SCIENCES, OSAKA PREFECTURE UNIVERSITY,
+     PENNSYLVANIA STATE UNIVERSITY, TOKYO INSTITUTE OF TECHNOLOGY,
+     UNIVERSITY OF AARHUS, UNIVERSITY OF ALBERTA,
+     UNIVERSITY OF CALIFORNIA AT SANTA BARBARA,
+     UNIVERSITY OF COPENHAGEN, UNIVERSITY OF IOWA,
+     UNIVERSITY OF MEMPHIS, UNIVERSITY OF MINNESOTA,
+     UNIVERSITY OF NEBRASKA, UNIVERSITY OF NEW ENGLAND,
+     UNIVERSITY OF NOTRE DAME, UNIVERSITY OF PISA,
+     UNIVERSITY OF SILESIA, UNIVERSITY OF TOKYO,
+     UNIVERSITY OF ZURICH, WASEDA UNIVERSITY,
+     YALE UNIVERSITY
+
+  GAMESS SOFTWARE MANAGEMENT TEAM FOR THIS RELEASE:
+     MARK S. GORDON (TEAM LEAD),
+     BRETT BODE (SENIOR ADVISOR),
+     GIUSEPPE BARCA,
+     COLLEEN BERTONI,
+     KRISTOPHER KEIPERT (ADVISOR),
+     SAROM S. LEANG (DEVELOPMENT LEAD),
+     BUU PHAM,
+     JACKSON HAYES (WEBSITE ADMINISTRATOR),
+     PENG XU
+
+
+ PARALLEL VERSION RUNNING ON       16 PROCESSORS IN        1 NODES.
+
+ EXECUTION OF GAMESS BEGUN 14:17:21 05-OCT-2022    
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD> $SYSTEM MWORDS=100 memddi=100 $END                                             
+ INPUT CARD> $CONTRL   MULT=1   UNITS=ANGS SCFTYP=RHF  RUNTYP=MAKEFP                        
+ INPUT CARD>   EXETYP=RUN   MAXIT=50  NPRINT=8 ispher=1 $END                                
+ INPUT CARD> $BASIS GBASIS=N31 NGAUSS=6 NDFUNC=1     $END                                   
+ INPUT CARD> $mp2    code=rimp2 $end                                                        
+ INPUT CARD> $rimp2  othaux=.f. ivmtd=0 gosmp=.f. usedm=.f. $end                            
+ INPUT CARD> $auxbas cabnam=CCD $end                                                        
+ INPUT CARD> $DATA                                                                          
+ INPUT CARD>   CO2 Make EFP                                                                 
+ INPUT CARD> CnV 2                                                                          
+ INPUT CARD>                                                                                
+ INPUT CARD> C           6.0  -0.0000000000   0.0000000000  -0.0000000002                   
+ INPUT CARD> O           8.0  -0.0000000000   1.1807411415   0.0000000001                   
+ INPUT CARD> $END                                                                           
+  100000000 WORDS OF MEMORY AVAILABLE
+
+     BASIS OPTIONS
+     -------------
+     GBASIS=N31          IGAUSS=       6      POLAR=POPN31  
+     NDFUNC=       1     NFFUNC=       0     DIFFSP=       F
+     NPFUNC=       0      DIFFS=       F     BASNAM=        
+
+
+     RUN TITLE
+     ---------
+    CO2 Make EFP                                                                 
+
+ THE POINT GROUP OF THE MOLECULE IS CNV     
+ THE ORDER OF THE PRINCIPAL AXIS IS     2
+
+ ATOM      ATOMIC                      COORDINATES (BOHR)
+           CHARGE         X                   Y                   Z
+ C           6.0    -0.0000000000        0.0000000000       -0.0000000004
+ O           8.0    -0.0000000000       -2.2312772199        0.0000000002
+ O           8.0    -0.0000000000        2.2312772199        0.0000000002
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 C          2 O          3 O     
+
+   1 C       0.0000000    1.1807411 *  1.1807411 *
+   2 O       1.1807411 *  0.0000000    2.3614823 *
+   3 O       1.1807411 *  2.3614823 *  0.0000000  
+
+  * ... LESS THAN  3.000
+
+
+     ATOMIC BASIS SET
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ C         
+
+      1   S       1          3047.5248800    0.001834737132
+      1   S       2           457.3695180    0.014037322813
+      1   S       3           103.9486850    0.068842622264
+      1   S       4            29.2101553    0.232184443216
+      1   S       5             9.2866630    0.467941348435
+      1   S       6             3.1639270    0.362311985337
+
+      2   L       7             7.8682723   -0.119332419775    0.068999066591
+      2   L       8             1.8812885   -0.160854151696    0.316423960957
+      2   L       9             0.5442493    1.143456437840    0.744308290898
+
+      3   L      10             0.1687145    1.000000000000    1.000000000000
+
+      4   D      11             0.8000000    1.000000000000
+
+ O         
+
+      9   S      12          5484.6716600    0.001831074430
+      9   S      13           825.2349460    0.013950172200
+      9   S      14           188.0469580    0.068445078098
+      9   S      15            52.9645000    0.232714335992
+      9   S      16            16.8975704    0.470192897984
+      9   S      17             5.7996353    0.358520852987
+
+     10   L      18            15.5396162   -0.110777549525    0.070874268231
+     10   L      19             3.5999336   -0.148026262701    0.339752839147
+     10   L      20             1.0137618    1.130767015354    0.727158577316
+
+     11   L      21             0.2700058    1.000000000000    1.000000000000
+
+     12   D      22             0.8000000    1.000000000000
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =   12
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =   45
+ NOTE: THIS RUN WILL RESTRICT THE MO VARIATION SPACE TO SPHERICAL HARMONICS.
+ THE NUMBER OF ORBITALS KEPT IN THE VARIATIONAL SPACE WILL BE PRINTED LATER.
+ NUMBER OF ELECTRONS                          =   22
+ CHARGE OF MOLECULE                           =    0
+ SPIN MULTIPLICITY                            =    1
+ NUMBER OF OCCUPIED ORBITALS (ALPHA)          =   11
+ NUMBER OF OCCUPIED ORBITALS (BETA )          =   11
+ TOTAL NUMBER OF ATOMS                        =    3
+ THE NUCLEAR REPULSION ENERGY IS       57.3662469461
+
+ THIS MOLECULE IS RECOGNIZED AS BEING LINEAR,
+ ORBITAL LZ DEGENERACY TOLERANCE ETOLLZ= 1.00E-06
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=MAKEFP       EXETYP=RUN     
+ MPLEVL=       0     CITYP =NONE         CCTYP =NONE         VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE  
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=       1     NOSYM =       0     MAXIT =      50     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=       8     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=   100000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=         100 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER  16 PROCESSORS IS     6250000 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=   106250000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= T  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0  mem22=         0
+
+     INPUT FOR POTENTIAL-DERIVED CHARGES 
+     -----------------------------------
+     VDWSCL=    0.00   RMAX=    3.00   DELR=    0.80
+     VDWINC=    0.10 PTDENS=    0.28
+     LAYER =      25  NFREQ=      30 MAXPDC=  100000
+     CONSTR=CHARGE    UNITS=ANGS      PTSEL=GEODESIC
+     CENTER=  0.0000  0.0000  0.0000
+     DPOLE =  0.0000  0.0000  0.0000
+     QPOLE =  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1    45     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTOFF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       F     AOINTS =DUP     
+
+          -----------------------------
+          LOCALIZATION INPUT PARAMETERS
+          -----------------------------
+           LOCAL=RUEDNBRG      NOUTA=       3
+          PRTLOC=       F      NOUTB=       0
+          MAXLOC=     250     CVGLOC=1.00E-06
+           FCORE=       T     SYMLOC=       F
+          MOIDON=       F     EDCOMP=       F
+          DIPDCM=       F      NPROT=       0
+          QADDCM=       F     DEPRNT=       F
+          POLNUM=       F     ORIENT=       F
+          POLDYN=       T      VMTOL=1.50E-01
+          NPRDTL=       2     IBOYAL=       1
+          EXTLOC=NONE    
+          MOOUTA =      1    2    3
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       F
+
+     ------------------------------------------
+     THE POINT GROUP IS CNV, NAXIS= 2, ORDER= 4
+     ------------------------------------------
+
+ -- VARIATIONAL SPACE WILL BE RESTRICTED TO PURE SPHERICAL HARMONICS ONLY --
+ AFTER EXCLUDING CONTAMINANT COMBINATIONS FROM THE CARTESIAN GAUSSIAN BASIS
+ SET, THE NUMBER OF SPHERICAL HARMONICS KEPT IN THE VARIATION SPACE IS   42
+
+     DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ A1  =   17     A2  =    5     B1  =    7     B2  =   13
+
+ ..... DONE SETTING UP THE RUN .....
+ CPU     0: STEP CPU TIME=     0.02 TOTAL CPU TIME=          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    48.92%
+
+          --------------
+          MAKEFP OPTIONS
+          --------------
+          FRAG=FRAGNAME
+          SCREEN= T    POL   = T    EXREP = T
+          DISP  = T    CHTR  = T    CTVVO =
+
+          ********************
+          1 ELECTRON INTEGRALS
+          ********************
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    48.39%
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES     18234 WORDS.
+
+ STATISTICS FOR GENERATION OF SYMMETRY ORBITAL -Q- MATRIX
+ NUMBER OF CARTESIAN ATOMIC ORBITALS=         45
+ NUMBER OF SPHERICAL CONTAMINANTS DROPPED=     3
+ NUMBER OF LINEARLY DEPENDENT MOS DROPPED=     0
+ TOTAL NUMBER OF MOS IN VARIATION SPACE=      42
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    11 ORBITALS ARE OCCUPIED (    3 CORE ORBITALS).
+     4=A1       5=B2       6=B1       7=A1       8=A1       9=B2      10=A2  
+    11=B2      12=A1      13=B1      14=A1      15=B2      16=A1      17=A1  
+    18=A1      19=A1      20=A1      21=A1  
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    48.44%
+
+                    ----------------------
+                    AO INTEGRAL TECHNOLOGY
+                    ----------------------
+     S,P,L SHELL ROTATED AXIS INTEGRALS, REPROGRAMMED BY
+        KAZUYA ISHIMURA (IMS) AND JOSE SIERRA (SYNSTAR).
+     S,P,D,L SHELL ROTATED AXIS INTEGRALS PROGRAMMED BY
+        KAZUYA ISHIMURA (INSTITUTE FOR MOLECULAR SCIENCE).
+     S,P,D,F,G SHELL TO TOTAL QUARTET ANGULAR MOMENTUM SUM 5,
+        ERIC PROGRAM BY GRAHAM FLETCHER (ELORET AND NASA ADVANCED
+        SUPERCOMPUTING DIVISION, AMES RESEARCH CENTER).
+     S,P,D,F,G,L SHELL GENERAL RYS QUADRATURE PROGRAMMED BY
+        MICHEL DUPUIS (PACIFIC NORTHWEST NATIONAL LABORATORY).
+
+          --------------------
+          2 ELECTRON INTEGRALS
+          --------------------
+
+ THE -PK- OPTION IS OFF, THE INTEGRALS ARE NOT IN SUPERMATRIX FORM.
+ STORING   15000 INTEGRALS/RECORD ON DISK, USING 12 BYTES/INTEGRAL.
+ TWO ELECTRON INTEGRAL EVALUATION REQUIRES   90474 WORDS OF MEMORY.
+ II,JST,KST,LST =  1  1  1  1 NREC =         1 INTLOC =    1
+ II,JST,KST,LST =  2  1  1  1 NREC =         1 INTLOC =    1
+ II,JST,KST,LST =  3  1  1  1 NREC =         1 INTLOC =    1
+ II,JST,KST,LST =  4  1  1  1 NREC =         1 INTLOC =   54
+ II,JST,KST,LST =  5  1  1  1 NREC =         1 INTLOC =   54
+ II,JST,KST,LST =  6  1  1  1 NREC =         1 INTLOC =   54
+ II,JST,KST,LST =  7  1  1  1 NREC =         1 INTLOC =   54
+ II,JST,KST,LST =  8  1  1  1 NREC =         1 INTLOC =   54
+ II,JST,KST,LST =  9  1  1  1 NREC =         1 INTLOC =   54
+ II,JST,KST,LST = 10  1  1  1 NREC =         1 INTLOC =   54
+ II,JST,KST,LST = 11  1  1  1 NREC =         1 INTLOC =  452
+ II,JST,KST,LST = 12  1  1  1 NREC =         1 INTLOC =  452
+ TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =               74744
+         16 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.1 SECONDS, CPU UTILIZATION IS    51.40%
+
+          --------------------------
+                 RHF SCF CALCULATION
+          --------------------------
+
+     NUCLEAR ENERGY =        57.3662469461
+     MAXIT =   50     NPUNCH=    2
+     EXTRAP=T  DAMP=F  SHIFT=F  RSTRCT=F  DIIS=F  DEM=F  SOSCF=T
+     DENSITY MATRIX CONV=  1.00E-05
+     SOSCF WILL OPTIMIZE     341 ORBITAL ROTATIONS, SOGTOL=   0.250
+     MEMORY REQUIRED FOR RHF ITERS=     46169 WORDS.
+
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE     ORB. GRAD
+   1  0  0     -187.0661557839  -187.0661557839   0.203428731   0.000000000
+          ---------------START SECOND ORDER SCF---------------
+   2  1  0     -187.5826836789    -0.5165278950   0.135510762   0.090526975
+   3  2  0     -187.6094920894    -0.0268084105   0.056769557   0.049911421
+   4  3  0     -187.6267885651    -0.0172964757   0.012196020   0.006380256
+   5  4  0     -187.6271012924    -0.0003127272   0.003003159   0.001532105
+   6  5  0     -187.6271325110    -0.0000312186   0.000475370   0.000444126
+   7  6  0     -187.6271340062    -0.0000014952   0.000128744   0.000106339
+   8  7  0     -187.6271340543    -0.0000000481   0.000031112   0.000009777
+   9  8  0     -187.6271340554    -0.0000000011   0.000003888   0.000001541
+  10  9  0     -187.6271340555    -0.0000000000   0.000000493   0.000000239
+
+          -----------------
+          DENSITY CONVERGED
+          -----------------
+     TIME TO FORM FOCK OPERATORS=       0.0 SECONDS (       0.0 SEC/ITER)
+     TIME TO SOLVE SCF EQUATIONS=       0.0 SECONDS (       0.0 SEC/ITER)
+
+ FINAL RHF ENERGY IS     -187.6271340555 AFTER  10 ITERATIONS
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    5) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     6 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     7 (    7) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     8 (    8) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO     9 (    8) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    10 (    9) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    12 (   10) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    14 (   11) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    15 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (   13) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    19 (   15) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    20 (   16) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    21 (   17) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    22 (   17) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    23 (   18) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    24 (   18) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    25 (   19) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    26 (   20) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    27 (   20) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    28 (   21) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    29 (   21) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    30 (   22) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    31 (   23) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    32 (   23) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    33 (   24) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    34 (   25) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    35 (   25) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    36 (   26) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    37 (   26) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    38 (   27) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    39 (   28) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    40 (   29) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    41 (   29) HAS LZ(WEIGHT)=-0.00( 50.0%)  0.00( 50.0%) 
+ MO    42 (   30) HAS LZ(WEIGHT)= 0.00(100.0%) 
+
+          ------------
+          EIGENVECTORS
+          ------------
+
+                      1          2          3          4          5
+                  -20.6645   -20.6644   -11.4816    -1.5207    -1.4661
+                     B2         A1         A1         A1         B2  
+    1  C  1  S    0.000000   0.000265   0.996205  -0.147751  -0.000000
+    2  C  1  S    0.000000  -0.000395   0.024578   0.289500  -0.000000
+    3  C  1  X    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+    4  C  1  Y   -0.000149  -0.000000  -0.000000  -0.000000  -0.314765
+    5  C  1  Z    0.000000  -0.000000   0.000000   0.000000  -0.000000
+    6  C  1  S    0.000000   0.005224  -0.000537   0.034236  -0.000000
+    7  C  1  X    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+    8  C  1  Y   -0.011093  -0.000000  -0.000000  -0.000000   0.036515
+    9  C  1  Z    0.000000   0.000000   0.000000   0.000000  -0.000000
+   10  C  1 XX    0.000000   0.001009  -0.001657  -0.025514  -0.000000
+   11  C  1 YY    0.000000  -0.002019   0.003314   0.051029  -0.000000
+   12  C  1 ZZ    0.000000   0.001009  -0.001657  -0.025514  -0.000000
+   13  C  1 XY    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   14  C  1 XZ    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   15  C  1 YZ   -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   16  O  2  S    0.704228   0.704152  -0.000396  -0.135783  -0.148207
+   17  O  2  S    0.016786   0.016125   0.000163   0.294227   0.324616
+   18  O  2  X    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   19  O  2  Y    0.001514   0.002131  -0.000408   0.100919   0.101847
+   20  O  2  Z    0.000000  -0.000000   0.000000   0.000000  -0.000000
+   21  O  2  S   -0.013322  -0.006139  -0.003395   0.269981   0.304737
+   22  O  2  X    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   23  O  2  Y   -0.003455  -0.002036  -0.002994   0.047645   0.032123
+   24  O  2  Z   -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   25  O  2 XX   -0.000014  -0.000185   0.000467  -0.004837  -0.005484
+   26  O  2 YY    0.000028   0.000371  -0.000935   0.009674   0.010969
+   27  O  2 ZZ   -0.000014  -0.000185   0.000467  -0.004837  -0.005484
+   28  O  2 XY    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   29  O  2 XZ    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   30  O  2 YZ   -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   31  O  3  S   -0.704228   0.704152  -0.000396  -0.135783   0.148207
+   32  O  3  S   -0.016786   0.016125   0.000163   0.294227  -0.324616
+   33  O  3  X    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   34  O  3  Y    0.001514  -0.002131   0.000408  -0.100919   0.101847
+   35  O  3  Z    0.000000  -0.000000   0.000000   0.000000   0.000000
+   36  O  3  S    0.013322  -0.006139  -0.003395   0.269981  -0.304737
+   37  O  3  X    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   38  O  3  Y   -0.003455   0.002036   0.002994  -0.047645   0.032123
+   39  O  3  Z    0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   40  O  3 XX    0.000014  -0.000185   0.000467  -0.004837   0.005484
+   41  O  3 YY   -0.000028   0.000371  -0.000935   0.009674  -0.010969
+   42  O  3 ZZ    0.000014  -0.000185   0.000467  -0.004837   0.005484
+   43  O  3 XY    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   44  O  3 XZ    0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   45  O  3 YZ   -0.000000  -0.000000   0.000000   0.000000  -0.000000
+
+                      6          7          8          9         10
+                   -0.7970    -0.7327    -0.7029    -0.7029    -0.5376
+                     A1         B2         A1         B1         B2  
+    1  C  1  S   -0.133886  -0.000000  -0.000000  -0.000000  -0.000000
+    2  C  1  S    0.319120  -0.000000  -0.000000  -0.000000  -0.000000
+    3  C  1  X   -0.000000  -0.000000   0.000000   0.351849  -0.000000
+    4  C  1  Y   -0.000000  -0.371803   0.000000  -0.000000   0.000000
+    5  C  1  Z   -0.000000  -0.000000   0.351849  -0.000000  -0.000000
+    6  C  1  S    0.160102  -0.000000  -0.000000  -0.000000  -0.000000
+    7  C  1  X   -0.000000  -0.000000   0.000000   0.133386  -0.000000
+    8  C  1  Y   -0.000000   0.009765   0.000000  -0.000000   0.000000
+    9  C  1  Z   -0.000000  -0.000000   0.133386  -0.000000  -0.000000
+   10  C  1 XX   -0.009210  -0.000000   0.000000  -0.000000  -0.000000
+   11  C  1 YY    0.018419  -0.000000  -0.000000  -0.000000  -0.000000
+   12  C  1 ZZ   -0.009210  -0.000000   0.000000  -0.000000  -0.000000
+   13  C  1 XY   -0.000000  -0.000000   0.000000  -0.000000  -0.000000
+   14  C  1 XZ   -0.000000  -0.000000   0.000000   0.000000  -0.000000
+   15  C  1 YZ   -0.000000  -0.000000   0.000000  -0.000000  -0.067894
+   16  O  2  S    0.086595   0.063284  -0.000000  -0.000000  -0.000000
+   17  O  2  S   -0.209420  -0.157410  -0.000000  -0.000000  -0.000000
+   18  O  2  X   -0.000000  -0.000000   0.000000   0.363982  -0.000000
+   19  O  2  Y    0.327045   0.385638   0.000000  -0.000000   0.000000
+   20  O  2  Z   -0.000000  -0.000000   0.363982  -0.000000   0.454464
+   21  O  2  S   -0.305093  -0.240426   0.000000  -0.000000   0.000000
+   22  O  2  X   -0.000000  -0.000000   0.000000   0.226041  -0.000000
+   23  O  2  Y    0.173443   0.200691   0.000000  -0.000000   0.000000
+   24  O  2  Z   -0.000000  -0.000000   0.226041  -0.000000   0.344244
+   25  O  2 XX   -0.009246  -0.011088  -0.000000  -0.000000  -0.000000
+   26  O  2 YY    0.018491   0.022176   0.000000  -0.000000   0.000000
+   27  O  2 ZZ   -0.009246  -0.011088  -0.000000  -0.000000  -0.000000
+   28  O  2 XY   -0.000000  -0.000000   0.000000   0.033812  -0.000000
+   29  O  2 XZ   -0.000000  -0.000000   0.000000  -0.000000  -0.000000
+   30  O  2 YZ   -0.000000  -0.000000   0.033812  -0.000000   0.026861
+   31  O  3  S    0.086595  -0.063284  -0.000000  -0.000000   0.000000
+   32  O  3  S   -0.209420   0.157410  -0.000000  -0.000000   0.000000
+   33  O  3  X   -0.000000  -0.000000   0.000000   0.363982  -0.000000
+   34  O  3  Y   -0.327045   0.385638  -0.000000  -0.000000   0.000000
+   35  O  3  Z   -0.000000   0.000000   0.363982  -0.000000  -0.454464
+   36  O  3  S   -0.305093   0.240426   0.000000  -0.000000  -0.000000
+   37  O  3  X   -0.000000  -0.000000   0.000000   0.226041  -0.000000
+   38  O  3  Y   -0.173443   0.200691  -0.000000  -0.000000   0.000000
+   39  O  3  Z   -0.000000   0.000000   0.226041  -0.000000  -0.344244
+   40  O  3 XX   -0.009246   0.011088  -0.000000  -0.000000   0.000000
+   41  O  3 YY    0.018491  -0.022176   0.000000  -0.000000  -0.000000
+   42  O  3 ZZ   -0.009246   0.011088  -0.000000  -0.000000   0.000000
+   43  O  3 XY   -0.000000  -0.000000   0.000000  -0.033812  -0.000000
+   44  O  3 XZ   -0.000000  -0.000000   0.000000  -0.000000  -0.000000
+   45  O  3 YZ    0.000000  -0.000000  -0.033812  -0.000000   0.026861
+
+                     11         12         13         14         15
+                   -0.5376     0.2004     0.2004     0.2524     0.5186
+                     A2         A1         B1         A1         B2  
+    1  C  1  S    0.000000   0.000000   0.000000  -0.088628   0.000000
+    2  C  1  S    0.000000  -0.000000   0.000000  -0.029182   0.000000
+    3  C  1  X    0.000000  -0.000000   0.530933  -0.000000   0.000000
+    4  C  1  Y    0.000000  -0.000000   0.000000  -0.000000   0.050054
+    5  C  1  Z    0.000000   0.530933   0.000000   0.000000   0.000000
+    6  C  1  S    0.000000  -0.000000   0.000000   2.448695   0.000000
+    7  C  1  X    0.000000  -0.000000   0.753183  -0.000000   0.000000
+    8  C  1  Y    0.000000  -0.000000   0.000000  -0.000000   3.981315
+    9  C  1  Z    0.000000   0.753183   0.000000   0.000000   0.000000
+   10  C  1 XX    0.000000   0.000000   0.000000   0.009847   0.000000
+   11  C  1 YY    0.000000  -0.000000   0.000000  -0.019693   0.000000
+   12  C  1 ZZ    0.000000   0.000000   0.000000   0.009847   0.000000
+   13  C  1 XY   -0.067894  -0.000000   0.000000  -0.000000   0.000000
+   14  C  1 XZ    0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   15  C  1 YZ    0.000000  -0.000000   0.000000  -0.000000  -0.000000
+   16  O  2  S    0.000000  -0.000000   0.000000   0.074648  -0.082432
+   17  O  2  S    0.000000   0.000000   0.000000  -0.145440   0.034699
+   18  O  2  X    0.454464  -0.000000  -0.328480  -0.000000   0.000000
+   19  O  2  Y    0.000000   0.000000   0.000000  -0.247943  -0.082139
+   20  O  2  Z    0.000000  -0.328480   0.000000  -0.000000  -0.000000
+   21  O  2  S    0.000000   0.000000   0.000000  -0.956586   2.722672
+   22  O  2  X    0.344244  -0.000000  -0.444489  -0.000000   0.000000
+   23  O  2  Y    0.000000   0.000000   0.000000  -0.631655   0.836056
+   24  O  2  Z    0.000000  -0.444489   0.000000  -0.000000   0.000000
+   25  O  2 XX    0.000000  -0.000000   0.000000   0.023113  -0.024131
+   26  O  2 YY    0.000000   0.000000   0.000000  -0.046226   0.048263
+   27  O  2 ZZ    0.000000  -0.000000   0.000000   0.023113  -0.024131
+   28  O  2 XY    0.026861  -0.000000   0.015398  -0.000000   0.000000
+   29  O  2 XZ   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   30  O  2 YZ    0.000000   0.015398   0.000000   0.000000   0.000000
+   31  O  3  S    0.000000  -0.000000   0.000000   0.074648   0.082432
+   32  O  3  S    0.000000   0.000000   0.000000  -0.145440  -0.034699
+   33  O  3  X   -0.454464  -0.000000  -0.328480  -0.000000   0.000000
+   34  O  3  Y    0.000000  -0.000000   0.000000   0.247943  -0.082139
+   35  O  3  Z    0.000000  -0.328480   0.000000  -0.000000   0.000000
+   36  O  3  S    0.000000   0.000000   0.000000  -0.956586  -2.722672
+   37  O  3  X   -0.344244  -0.000000  -0.444489  -0.000000   0.000000
+   38  O  3  Y    0.000000  -0.000000   0.000000   0.631655   0.836056
+   39  O  3  Z    0.000000  -0.444489   0.000000  -0.000000  -0.000000
+   40  O  3 XX    0.000000  -0.000000   0.000000   0.023113   0.024131
+   41  O  3 YY    0.000000   0.000000   0.000000  -0.046226  -0.048263
+   42  O  3 ZZ    0.000000  -0.000000   0.000000   0.023113   0.024131
+   43  O  3 XY    0.026861  -0.000000  -0.015398  -0.000000   0.000000
+   44  O  3 XZ    0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   45  O  3 YZ    0.000000  -0.015398   0.000000  -0.000000   0.000000
+
+                     16         17         18         19         20
+                    0.6685     0.6685     0.8042     0.9676     1.0533
+                     A1         B1         A1         B2         A1  
+    1  C  1  S   -0.000000  -0.000000   0.124268  -0.000000  -0.058992
+    2  C  1  S    0.000000  -0.000000  -1.280362  -0.000000  -1.057344
+    3  C  1  X   -0.000000  -0.978059   0.000000  -0.000000   0.000000
+    4  C  1  Y   -0.000000  -0.000000   0.000000   1.055718   0.000000
+    5  C  1  Z   -0.978059  -0.000000  -0.000000  -0.000000  -0.000000
+    6  C  1  S   -0.000000  -0.000000   1.967189  -0.000000  -0.999562
+    7  C  1  X   -0.000000   1.281881   0.000000  -0.000000   0.000000
+    8  C  1  Y   -0.000000  -0.000000   0.000000   0.066991   0.000000
+    9  C  1  Z    1.281881  -0.000000   0.000000  -0.000000  -0.000000
+   10  C  1 XX    0.000000  -0.000000  -0.148050  -0.000000   0.142867
+   11  C  1 YY   -0.000000  -0.000000   0.296101  -0.000000  -0.285734
+   12  C  1 ZZ    0.000000  -0.000000  -0.148050  -0.000000   0.142867
+   13  C  1 XY   -0.000000  -0.000000   0.000000  -0.000000   0.000000
+   14  C  1 XZ   -0.000000  -0.000000   0.000000  -0.000000   0.000000
+   15  C  1 YZ   -0.000000  -0.000000   0.000000  -0.000000   0.000000
+   16  O  2  S    0.000000  -0.000000  -0.011837  -0.057206  -0.053014
+   17  O  2  S   -0.000000  -0.000000   0.107939   0.185335   0.186763
+   18  O  2  X   -0.000000  -0.077892   0.000000  -0.000000   0.000000
+   19  O  2  Y   -0.000000  -0.000000   0.330924  -0.064552  -0.436946
+   20  O  2  Z   -0.077892  -0.000000  -0.000000  -0.000000  -0.000000
+   21  O  2  S    0.000000  -0.000000  -0.633192   0.442200   0.596639
+   22  O  2  X   -0.000000  -0.141207   0.000000  -0.000000   0.000000
+   23  O  2  Y    0.000000  -0.000000  -0.279696   0.958422   1.267077
+   24  O  2  Z   -0.141207  -0.000000   0.000000   0.000000   0.000000
+   25  O  2 XX    0.000000  -0.000000   0.086672   0.051866  -0.029127
+   26  O  2 YY   -0.000000  -0.000000  -0.173344  -0.103732   0.058254
+   27  O  2 ZZ    0.000000  -0.000000   0.086672   0.051866  -0.029127
+   28  O  2 XY   -0.000000  -0.073611   0.000000  -0.000000   0.000000
+   29  O  2 XZ   -0.000000   0.000000   0.000000  -0.000000   0.000000
+   30  O  2 YZ   -0.073611  -0.000000   0.000000   0.000000   0.000000
+   31  O  3  S    0.000000  -0.000000  -0.011837   0.057206  -0.053014
+   32  O  3  S   -0.000000  -0.000000   0.107939  -0.185335   0.186763
+   33  O  3  X   -0.000000  -0.077892   0.000000  -0.000000   0.000000
+   34  O  3  Y    0.000000  -0.000000  -0.330924  -0.064552   0.436946
+   35  O  3  Z   -0.077892  -0.000000  -0.000000   0.000000  -0.000000
+   36  O  3  S    0.000000  -0.000000  -0.633192  -0.442200   0.596639
+   37  O  3  X   -0.000000  -0.141207   0.000000  -0.000000   0.000000
+   38  O  3  Y   -0.000000  -0.000000   0.279696   0.958422  -1.267077
+   39  O  3  Z   -0.141207  -0.000000   0.000000  -0.000000   0.000000
+   40  O  3 XX    0.000000  -0.000000   0.086672  -0.051866  -0.029127
+   41  O  3 YY   -0.000000  -0.000000  -0.173344   0.103732   0.058254
+   42  O  3 ZZ    0.000000  -0.000000   0.086672  -0.051866  -0.029127
+   43  O  3 XY   -0.000000   0.073611   0.000000  -0.000000   0.000000
+   44  O  3 XZ   -0.000000   0.000000   0.000000  -0.000000   0.000000
+   45  O  3 YZ    0.073611  -0.000000  -0.000000   0.000000  -0.000000
+
+                     21         22         23         24         25
+                    1.1496     1.1496     1.3201     1.3201     1.3773
+                     B2         A2         A1         B1         B2  
+    1  C  1  S   -0.000000   0.000000  -0.000000  -0.000000   0.000000
+    2  C  1  S   -0.000000   0.000000   0.000000  -0.000000   0.000000
+    3  C  1  X   -0.000000   0.000000  -0.000000   0.184114   0.000000
+    4  C  1  Y    0.000000   0.000000  -0.000000  -0.000000   0.554387
+    5  C  1  Z   -0.000000   0.000000   0.184114  -0.000000   0.000000
+    6  C  1  S   -0.000000   0.000000  -0.000000  -0.000000   0.000000
+    7  C  1  X   -0.000000   0.000000  -0.000000  -0.964683   0.000000
+    8  C  1  Y   -0.000000   0.000000  -0.000000  -0.000000   0.538221
+    9  C  1  Z   -0.000000   0.000000  -0.964683  -0.000000   0.000000
+   10  C  1 XX   -0.000000   0.000000  -0.000000  -0.000000   0.000000
+   11  C  1 YY   -0.000000   0.000000   0.000000  -0.000000   0.000000
+   12  C  1 ZZ   -0.000000   0.000000   0.000000  -0.000000   0.000000
+   13  C  1 XY   -0.000000   0.168099  -0.000000  -0.000000   0.000000
+   14  C  1 XZ   -0.000000   0.000000  -0.000000   0.000000   0.000000
+   15  C  1 YZ    0.168099   0.000000  -0.000000  -0.000000  -0.000000
+   16  O  2  S    0.000000   0.000000  -0.000000  -0.000000  -0.027366
+   17  O  2  S   -0.000000   0.000000   0.000000  -0.000000   0.102644
+   18  O  2  X   -0.000000  -0.650520  -0.000000  -0.666955   0.000000
+   19  O  2  Y    0.000000   0.000000  -0.000000  -0.000000   0.751092
+   20  O  2  Z   -0.650520   0.000000  -0.666955  -0.000000  -0.000000
+   21  O  2  S    0.000000   0.000000   0.000000  -0.000000   0.466616
+   22  O  2  X   -0.000000   0.805833  -0.000000   1.079268   0.000000
+   23  O  2  Y   -0.000000   0.000000   0.000000  -0.000000  -0.472408
+   24  O  2  Z    0.805833   0.000000   1.079268  -0.000000  -0.000000
+   25  O  2 XX    0.000000   0.000000  -0.000000  -0.000000   0.050600
+   26  O  2 YY   -0.000000   0.000000   0.000000  -0.000000  -0.101199
+   27  O  2 ZZ    0.000000   0.000000   0.000000  -0.000000   0.050600
+   28  O  2 XY   -0.000000  -0.019633  -0.000000  -0.074617   0.000000
+   29  O  2 XZ   -0.000000   0.000000  -0.000000   0.000000   0.000000
+   30  O  2 YZ   -0.019633   0.000000  -0.074617  -0.000000   0.000000
+   31  O  3  S   -0.000000   0.000000  -0.000000  -0.000000   0.027366
+   32  O  3  S    0.000000   0.000000   0.000000  -0.000000  -0.102644
+   33  O  3  X   -0.000000   0.650520  -0.000000  -0.666955   0.000000
+   34  O  3  Y    0.000000   0.000000   0.000000  -0.000000   0.751092
+   35  O  3  Z    0.650520   0.000000  -0.666955  -0.000000   0.000000
+   36  O  3  S   -0.000000   0.000000   0.000000  -0.000000  -0.466616
+   37  O  3  X   -0.000000  -0.805833  -0.000000   1.079268   0.000000
+   38  O  3  Y   -0.000000   0.000000  -0.000000  -0.000000  -0.472408
+   39  O  3  Z   -0.805833   0.000000   1.079268  -0.000000   0.000000
+   40  O  3 XX   -0.000000   0.000000  -0.000000  -0.000000  -0.050600
+   41  O  3 YY    0.000000   0.000000   0.000000  -0.000000   0.101199
+   42  O  3 ZZ   -0.000000   0.000000   0.000000  -0.000000  -0.050600
+   43  O  3 XY   -0.000000  -0.019633  -0.000000   0.074617   0.000000
+   44  O  3 XZ   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+   45  O  3 YZ   -0.019633   0.000000   0.074617  -0.000000   0.000000
+
+                     26         27         28         29         30
+                    1.6477     1.6477     1.6668     1.6668     1.7379
+                     B1         A1         B2         A2         A1  
+    1  C  1  S    0.000000   0.000000  -0.000000  -0.000000   0.026933
+    2  C  1  S    0.000000   0.000000  -0.000000  -0.000000   0.327931
+    3  C  1  X   -0.000000   0.000000  -0.000000  -0.000000  -0.000000
+    4  C  1  Y    0.000000   0.000000   0.000000  -0.000000  -0.000000
+    5  C  1  Z    0.000000  -0.000000  -0.000000  -0.000000   0.000000
+    6  C  1  S    0.000000   0.000000  -0.000000  -0.000000   2.936433
+    7  C  1  X    0.000000   0.000000  -0.000000  -0.000000  -0.000000
+    8  C  1  Y    0.000000   0.000000  -0.000000  -0.000000  -0.000000
+    9  C  1  Z    0.000000   0.000000  -0.000000  -0.000000   0.000000
+   10  C  1 XX    0.000000  -0.648674  -0.000000  -0.000000  -0.204189
+   11  C  1 YY    0.000000   0.000000  -0.000000  -0.000000   0.408378
+   12  C  1 ZZ    0.000000   0.648674  -0.000000  -0.000000  -0.204189
+   13  C  1 XY    0.000000   0.000000  -0.000000   0.537850  -0.000000
+   14  C  1 XZ    0.749025   0.000000  -0.000000  -0.000000  -0.000000
+   15  C  1 YZ    0.000000   0.000000   0.537850  -0.000000  -0.000000
+   16  O  2  S    0.000000   0.000000  -0.000000  -0.000000  -0.018398
+   17  O  2  S    0.000000   0.000000   0.000000  -0.000000   1.105952
+   18  O  2  X    0.000000   0.000000  -0.000000   0.202036  -0.000000
+   19  O  2  Y    0.000000   0.000000   0.000000  -0.000000  -0.063250
+   20  O  2  Z    0.000000   0.000000   0.202036  -0.000000   0.000000
+   21  O  2  S    0.000000   0.000000  -0.000000  -0.000000  -2.560429
+   22  O  2  X   -0.000000   0.000000  -0.000000   0.017676  -0.000000
+   23  O  2  Y    0.000000   0.000000  -0.000000  -0.000000  -1.017496
+   24  O  2  Z    0.000000  -0.000000   0.017676  -0.000000  -0.000000
+   25  O  2 XX    0.000000  -0.326684   0.000000  -0.000000  -0.054349
+   26  O  2 YY    0.000000   0.000000  -0.000000  -0.000000   0.108697
+   27  O  2 ZZ    0.000000   0.326684   0.000000  -0.000000  -0.054349
+   28  O  2 XY    0.000000   0.000000  -0.000000  -0.418555  -0.000000
+   29  O  2 XZ    0.377222   0.000000  -0.000000   0.000000  -0.000000
+   30  O  2 YZ    0.000000   0.000000  -0.418555  -0.000000  -0.000000
+   31  O  3  S    0.000000   0.000000   0.000000  -0.000000  -0.018398
+   32  O  3  S    0.000000   0.000000  -0.000000  -0.000000   1.105952
+   33  O  3  X    0.000000   0.000000  -0.000000  -0.202036  -0.000000
+   34  O  3  Y    0.000000   0.000000   0.000000  -0.000000   0.063250
+   35  O  3  Z    0.000000   0.000000  -0.202036  -0.000000   0.000000
+   36  O  3  S    0.000000   0.000000   0.000000  -0.000000  -2.560429
+   37  O  3  X   -0.000000   0.000000  -0.000000  -0.017676  -0.000000
+   38  O  3  Y    0.000000   0.000000  -0.000000  -0.000000   1.017496
+   39  O  3  Z    0.000000  -0.000000  -0.017676  -0.000000  -0.000000
+   40  O  3 XX    0.000000  -0.326684  -0.000000  -0.000000  -0.054349
+   41  O  3 YY    0.000000   0.000000   0.000000  -0.000000   0.108697
+   42  O  3 ZZ    0.000000   0.326684  -0.000000  -0.000000  -0.054349
+   43  O  3 XY   -0.000000   0.000000  -0.000000  -0.418555  -0.000000
+   44  O  3 XZ    0.377222   0.000000  -0.000000  -0.000000  -0.000000
+   45  O  3 YZ    0.000000  -0.000000  -0.418555  -0.000000   0.000000
+
+                     31         32         33         34         35
+                    2.0160     2.0160     2.1971     2.3209     2.3209
+                     A2         B2         B2         B1         A1  
+    1  C  1  S    0.000000  -0.000000  -0.000000   0.000000   0.000000
+    2  C  1  S    0.000000  -0.000000  -0.000000   0.000000   0.000000
+    3  C  1  X    0.000000  -0.000000  -0.000000  -0.000000   0.000000
+    4  C  1  Y    0.000000  -0.000000   0.116732   0.000000   0.000000
+    5  C  1  Z    0.000000  -0.000000  -0.000000   0.000000  -0.000000
+    6  C  1  S    0.000000  -0.000000  -0.000000   0.000000   0.000000
+    7  C  1  X    0.000000  -0.000000  -0.000000  -0.000000   0.000000
+    8  C  1  Y    0.000000  -0.000000   4.161115   0.000000   0.000000
+    9  C  1  Z    0.000000  -0.000000  -0.000000   0.000000  -0.000000
+   10  C  1 XX    0.000000  -0.000000  -0.000000   0.000000  -0.598532
+   11  C  1 YY    0.000000  -0.000000  -0.000000   0.000000   0.000000
+   12  C  1 ZZ    0.000000  -0.000000  -0.000000   0.000000   0.598532
+   13  C  1 XY    0.000000  -0.000000  -0.000000   0.000000   0.000000
+   14  C  1 XZ    0.000000  -0.000000  -0.000000   0.691125   0.000000
+   15  C  1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  O  2  S    0.000000  -0.000000   0.012557   0.000000   0.000000
+   17  O  2  S    0.000000  -0.000000  -1.450396   0.000000   0.000000
+   18  O  2  X   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   19  O  2  Y    0.000000  -0.000000  -0.076418   0.000000   0.000000
+   20  O  2  Z    0.000000  -0.000000   0.000000   0.000000  -0.000000
+   21  O  2  S    0.000000  -0.000000   4.412043   0.000000   0.000000
+   22  O  2  X    0.000000  -0.000000  -0.000000   0.000000   0.000000
+   23  O  2  Y    0.000000  -0.000000   1.073360   0.000000   0.000000
+   24  O  2  Z    0.000000   0.000000  -0.000000   0.000000   0.000000
+   25  O  2 XX    0.000000  -0.612479   0.113991   0.000000   0.531650
+   26  O  2 YY    0.000000  -0.000000  -0.227983   0.000000   0.000000
+   27  O  2 ZZ    0.000000   0.612479   0.113991   0.000000  -0.531650
+   28  O  2 XY    0.000000  -0.000000  -0.000000   0.000000   0.000000
+   29  O  2 XZ    0.707230  -0.000000  -0.000000  -0.613897   0.000000
+   30  O  2 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   31  O  3  S    0.000000  -0.000000  -0.012557   0.000000   0.000000
+   32  O  3  S    0.000000  -0.000000   1.450396   0.000000   0.000000
+   33  O  3  X    0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   34  O  3  Y    0.000000  -0.000000  -0.076418   0.000000   0.000000
+   35  O  3  Z    0.000000   0.000000  -0.000000   0.000000  -0.000000
+   36  O  3  S    0.000000  -0.000000  -4.412043   0.000000   0.000000
+   37  O  3  X   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+   38  O  3  Y    0.000000  -0.000000   1.073360   0.000000   0.000000
+   39  O  3  Z    0.000000  -0.000000   0.000000   0.000000   0.000000
+   40  O  3 XX    0.000000   0.612479  -0.113991   0.000000   0.531650
+   41  O  3 YY    0.000000  -0.000000   0.227983   0.000000   0.000000
+   42  O  3 ZZ    0.000000  -0.612479  -0.113991   0.000000  -0.531650
+   43  O  3 XY    0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   44  O  3 XZ   -0.707230  -0.000000  -0.000000  -0.613897   0.000000
+   45  O  3 YZ    0.000000   0.000000   0.000000   0.000000  -0.000000
+
+                     36         37         38         39         40
+                    2.4285     2.4285     3.0881     3.2781     3.2817
+                     A1         B1         A1         B2         A2  
+    1  C  1  S    0.000000   0.000000  -0.146903  -0.000000  -0.000000
+    2  C  1  S   -0.000000   0.000000  -1.711502  -0.000000  -0.000000
+    3  C  1  X   -0.000000  -0.493823   0.000000  -0.000000  -0.000000
+    4  C  1  Y   -0.000000   0.000000   0.000000   1.787668  -0.000000
+    5  C  1  Z   -0.493823   0.000000  -0.000000  -0.000000  -0.000000
+    6  C  1  S   -0.000000   0.000000  -1.449947  -0.000000  -0.000000
+    7  C  1  X   -0.000000  -0.393836   0.000000  -0.000000  -0.000000
+    8  C  1  Y   -0.000000   0.000000   0.000000   1.758347  -0.000000
+    9  C  1  Z   -0.393836   0.000000  -0.000000  -0.000000  -0.000000
+   10  C  1 XX    0.000000   0.000000  -0.142326  -0.000000  -0.000000
+   11  C  1 YY   -0.000000   0.000000   0.284652  -0.000000  -0.000000
+   12  C  1 ZZ   -0.000000   0.000000  -0.142326  -0.000000  -0.000000
+   13  C  1 XY   -0.000000   0.000000   0.000000  -0.000000   1.290458
+   14  C  1 XZ   -0.000000  -0.000000   0.000000  -0.000000  -0.000000
+   15  C  1 YZ   -0.000000   0.000000   0.000000  -0.000001  -0.000000
+   16  O  2  S   -0.000000   0.000000  -0.011014  -0.038157  -0.000000
+   17  O  2  S    0.000000   0.000000  -0.863603  -0.663158  -0.000000
+   18  O  2  X   -0.000000  -0.143592   0.000000  -0.000000   0.133070
+   19  O  2  Y    0.000000   0.000000  -0.252041   0.132222  -0.000000
+   20  O  2  Z   -0.143592   0.000000   0.000000  -0.000000  -0.000000
+   21  O  2  S    0.000000   0.000000   1.829789   2.724315  -0.000000
+   22  O  2  X   -0.000000   0.418625   0.000000  -0.000000   0.294067
+   23  O  2  Y    0.000000   0.000000   1.234420   1.305442  -0.000000
+   24  O  2  Z    0.418625   0.000000   0.000000  -0.000000  -0.000000
+   25  O  2 XX   -0.000000   0.000000  -0.393176  -0.481979  -0.000000
+   26  O  2 YY    0.000000   0.000000   0.786352   0.963958  -0.000000
+   27  O  2 ZZ    0.000000   0.000000  -0.393176  -0.481979  -0.000000
+   28  O  2 XY   -0.000000   0.785922   0.000000  -0.000000   0.818727
+   29  O  2 XZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   30  O  2 YZ    0.785922   0.000000   0.000000  -0.000001  -0.000000
+   31  O  3  S   -0.000000   0.000000  -0.011014   0.038157  -0.000000
+   32  O  3  S    0.000000   0.000000  -0.863603   0.663158  -0.000000
+   33  O  3  X   -0.000000  -0.143592   0.000000  -0.000000  -0.133070
+   34  O  3  Y   -0.000000   0.000000   0.252041   0.132222  -0.000000
+   35  O  3  Z   -0.143592   0.000000   0.000000   0.000000  -0.000000
+   36  O  3  S    0.000000   0.000000   1.829789  -2.724315  -0.000000
+   37  O  3  X   -0.000000   0.418625   0.000000  -0.000000  -0.294067
+   38  O  3  Y   -0.000000   0.000000  -1.234420   1.305442  -0.000000
+   39  O  3  Z    0.418625   0.000000   0.000000   0.000000  -0.000000
+   40  O  3 XX   -0.000000   0.000000  -0.393176   0.481979  -0.000000
+   41  O  3 YY    0.000000   0.000000   0.786352  -0.963958  -0.000000
+   42  O  3 ZZ    0.000000   0.000000  -0.393176   0.481979  -0.000000
+   43  O  3 XY   -0.000000  -0.785922   0.000000  -0.000000   0.818727
+   44  O  3 XZ   -0.000000   0.000000   0.000000  -0.000000   0.000000
+   45  O  3 YZ   -0.785922   0.000000  -0.000000  -0.000001  -0.000000
+
+                     41         42
+                    3.2817     3.5246
+                     B2         A1  
+    1  C  1  S    0.000000   0.023749
+    2  C  1  S    0.000000   1.963555
+    3  C  1  X    0.000000   0.000000
+    4  C  1  Y    0.000001   0.000000
+    5  C  1  Z    0.000000  -0.000000
+    6  C  1  S    0.000000   1.890803
+    7  C  1  X    0.000000   0.000000
+    8  C  1  Y    0.000001   0.000000
+    9  C  1  Z    0.000000  -0.000000
+   10  C  1 XX    0.000000  -0.862528
+   11  C  1 YY    0.000000   1.725056
+   12  C  1 ZZ    0.000000  -0.862528
+   13  C  1 XY    0.000000   0.000000
+   14  C  1 XZ    0.000000   0.000000
+   15  C  1 YZ    1.290458   0.000000
+   16  O  2  S   -0.000000   0.063691
+   17  O  2  S   -0.000001  -0.138994
+   18  O  2  X    0.000000   0.000000
+   19  O  2  Y    0.000000  -0.719367
+   20  O  2  Z    0.133070   0.000000
+   21  O  2  S    0.000002  -1.737737
+   22  O  2  X    0.000000   0.000000
+   23  O  2  Y    0.000001  -1.018706
+   24  O  2  Z    0.294067   0.000000
+   25  O  2 XX   -0.000000   0.461420
+   26  O  2 YY    0.000001  -0.922841
+   27  O  2 ZZ   -0.000000   0.461420
+   28  O  2 XY    0.000000   0.000000
+   29  O  2 XZ    0.000000   0.000000
+   30  O  2 YZ    0.818727   0.000000
+   31  O  3  S    0.000000   0.063691
+   32  O  3  S    0.000001  -0.138994
+   33  O  3  X    0.000000   0.000000
+   34  O  3  Y    0.000000   0.719367
+   35  O  3  Z   -0.133070   0.000000
+   36  O  3  S   -0.000002  -1.737737
+   37  O  3  X    0.000000   0.000000
+   38  O  3  Y    0.000001   1.018706
+   39  O  3  Z   -0.294067   0.000000
+   40  O  3 XX    0.000000   0.461420
+   41  O  3 YY   -0.000001  -0.922841
+   42  O  3 ZZ    0.000000   0.461420
+   43  O  3 XY    0.000000   0.000000
+   44  O  3 XZ    0.000000   0.000000
+   45  O  3 YZ    0.818727  -0.000000
+ ...... END OF RHF CALCULATION ......
+ CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.1 SECONDS, CPU UTILIZATION IS    49.90%
+
+     ----------------------------------------------------------------
+     PROPERTY VALUES FOR THE RHF   SELF-CONSISTENT FIELD WAVEFUNCTION
+     ----------------------------------------------------------------
+
+          -----------------
+          ENERGY COMPONENTS
+          -----------------
+
+         WAVEFUNCTION NORMALIZATION =       1.0000000000
+
+                ONE ELECTRON ENERGY =    -370.3709890592
+                TWO ELECTRON ENERGY =     125.3776080576
+           NUCLEAR REPULSION ENERGY =      57.3662469461
+                                      ------------------
+                       TOTAL ENERGY =    -187.6271340555
+
+ ELECTRON-ELECTRON POTENTIAL ENERGY =     125.3776080576
+  NUCLEUS-ELECTRON POTENTIAL ENERGY =    -557.3038125244
+   NUCLEUS-NUCLEUS POTENTIAL ENERGY =      57.3662469461
+                                      ------------------
+             TOTAL POTENTIAL ENERGY =    -374.5599575206
+               TOTAL KINETIC ENERGY =     186.9328234652
+                 VIRIAL RATIO (V/T) =       2.0037142251
+
+  ...... PI ENERGY ANALYSIS ......
+
+ ENERGY ANALYSIS:
+            FOCK ENERGY=   -119.6157736397
+          BARE H ENERGY=   -370.3709890592
+     ELECTRONIC ENERGY =   -244.9933813494
+         KINETIC ENERGY=    186.9328234652
+          N-N REPULSION=     57.3662469461
+           TOTAL ENERGY=   -187.6271344033
+        SIGMA PART(1+2)=   -200.6475474853
+               (K,V1,2)=    170.2829035935   -456.9239691575     85.9935180787
+           PI PART(1+2)=    -44.3458338641
+               (K,V1,2)=     16.6499198717   -100.3798433669     39.3840896310
+  SIGMA SKELETON, ERROR=   -143.2813005392      0.0000000000
+             MIXED PART=-8.36327E-16 6.79266E-17-8.51678E-16-5.25756E-17
+ ...... END OF PI ENERGY ANALYSIS ......
+
+          ---------------------------------------
+          MULLIKEN AND LOWDIN POPULATION ANALYSES
+          ---------------------------------------
+
+     AO MULLIKEN POPULATIONS IN EACH MOLECULAR ORBITAL
+
+                      1          2          3          4          5
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             0.000000   0.000000   1.992110   0.003465   0.000000
+    2             0.000000  -0.000030   0.011577   0.408965   0.000000
+    3             0.000000   0.000000   0.000000   0.000000   0.000000
+    4             0.000023   0.000000   0.000000   0.000000   0.479378
+    5             0.000000   0.000000  -0.000000   0.000000   0.000000
+    6             0.000000   0.000838  -0.000210   0.054351   0.000000
+    7             0.000000   0.000000   0.000000   0.000000   0.000000
+    8             0.003165   0.000000   0.000000   0.000000  -0.060356
+    9             0.000000   0.000000  -0.000000   0.000000   0.000000
+   10             0.000000  -0.000106   0.000003   0.009613   0.000000
+   11             0.000000  -0.000319   0.000008   0.028838   0.000000
+   12             0.000000   0.000000   0.000000   0.000000   0.000000
+   13             0.000000   0.000000   0.000000   0.000000   0.000000
+   14             0.000000   0.000000   0.000000   0.000000   0.000000
+   15             0.000000   0.000000  -0.000000  -0.000000   0.000000
+   16             0.995783   0.995676   0.000000   0.002461   0.002888
+   17             0.005932   0.005698   0.000004   0.325600   0.385245
+   18             0.000000   0.000000   0.000000   0.000000   0.000000
+   19             0.000003   0.000004  -0.000023   0.042721   0.040712
+   20             0.000000   0.000000  -0.000000  -0.000000   0.000000
+   21            -0.003333  -0.001555  -0.000522   0.342471   0.354318
+   22             0.000000   0.000000   0.000000   0.000000   0.000000
+   23             0.000021  -0.000015  -0.000989   0.032188   0.005577
+   24            -0.000000   0.000000   0.000000   0.000000   0.000000
+   25             0.000000   0.000000  -0.000054   0.000486   0.000437
+   26             0.000000   0.000000  -0.000161   0.001458   0.001311
+   27             0.000000   0.000000   0.000000   0.000000   0.000000
+   28             0.000000   0.000000   0.000000   0.000000   0.000000
+   29             0.000000   0.000000   0.000000  -0.000000   0.000000
+   30            -0.000000  -0.000000  -0.000000   0.000000   0.000000
+   31             0.995783   0.995676   0.000000   0.002461   0.002888
+   32             0.005932   0.005698   0.000004   0.325600   0.385245
+   33             0.000000   0.000000   0.000000   0.000000   0.000000
+   34             0.000003   0.000004  -0.000023   0.042721   0.040712
+   35             0.000000   0.000000  -0.000000  -0.000000   0.000000
+   36            -0.003333  -0.001555  -0.000522   0.342471   0.354318
+   37             0.000000   0.000000   0.000000   0.000000   0.000000
+   38             0.000021  -0.000015  -0.000989   0.032188   0.005577
+   39            -0.000000   0.000000   0.000000   0.000000   0.000000
+   40             0.000000   0.000000  -0.000054   0.000486   0.000437
+   41             0.000000   0.000000  -0.000161   0.001458   0.001311
+   42             0.000000   0.000000   0.000000   0.000000   0.000000
+   43             0.000000   0.000000   0.000000   0.000000   0.000000
+   44             0.000000   0.000000   0.000000  -0.000000   0.000000
+   45            -0.000000  -0.000000  -0.000000   0.000000   0.000000
+
+                      6          7          8          9         10
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             0.002284   0.000000  -0.000000   0.000000   0.000000
+    2             0.295813   0.000000  -0.000000   0.000000   0.000000
+    3             0.000000   0.000000   0.000000   0.459758   0.000000
+    4             0.000000   0.336195   0.000000   0.000000  -0.000000
+    5             0.000000   0.000000   0.459758   0.000000   0.000000
+    6             0.066157   0.000000   0.000000   0.000000   0.000000
+    7             0.000000   0.000000   0.000000   0.190858   0.000000
+    8             0.000000   0.003541   0.000000   0.000000   0.000000
+    9             0.000000   0.000000   0.190858   0.000000   0.000000
+   10            -0.000037   0.000000   0.000000   0.000000   0.000000
+   11            -0.000110   0.000000  -0.000000   0.000000   0.000000
+   12             0.000000   0.000000   0.000000   0.000000   0.000000
+   13             0.000000   0.000000   0.000000   0.000000   0.000000
+   14             0.000000  -0.000000   0.000000   0.000000   0.060512
+   15             0.000000   0.000000  -0.000000   0.000000   0.000000
+   16             0.000774   0.000385  -0.000000   0.000000   0.000000
+   17             0.128056   0.071486   0.000000   0.000000  -0.000000
+   18             0.000000   0.000000   0.000000   0.389919   0.000000
+   19             0.336179   0.452356   0.000000   0.000000   0.000000
+   20             0.000000   0.000000   0.389919   0.000000   0.579927
+   21             0.140528   0.119523  -0.000000   0.000000  -0.000000
+   22             0.000000   0.000000   0.000000   0.273982   0.000000
+   23             0.208036   0.181637   0.000000   0.000000   0.000000
+   24             0.000000   0.000000   0.273982   0.000000   0.387377
+   25             0.001093   0.001186   0.000000   0.000000   0.000000
+   26             0.003280   0.003559   0.000000   0.000000   0.000000
+   27             0.000000   0.000000   0.000000   0.010791   0.000000
+   28             0.000000   0.000000   0.000000   0.000000   0.000000
+   29             0.000000   0.000000   0.010791   0.000000   0.002440
+   30            -0.000000   0.000000   0.000000   0.000000   0.000000
+   31             0.000774   0.000385  -0.000000   0.000000   0.000000
+   32             0.128056   0.071486   0.000000   0.000000  -0.000000
+   33             0.000000   0.000000   0.000000   0.389919   0.000000
+   34             0.336179   0.452356   0.000000   0.000000   0.000000
+   35             0.000000   0.000000   0.389919   0.000000   0.579927
+   36             0.140528   0.119523  -0.000000   0.000000  -0.000000
+   37             0.000000   0.000000   0.000000   0.273982   0.000000
+   38             0.208036   0.181637   0.000000   0.000000   0.000000
+   39             0.000000   0.000000   0.273982   0.000000   0.387377
+   40             0.001093   0.001186   0.000000   0.000000   0.000000
+   41             0.003280   0.003559   0.000000   0.000000   0.000000
+   42             0.000000   0.000000   0.000000   0.010791   0.000000
+   43             0.000000   0.000000   0.000000   0.000000   0.000000
+   44             0.000000   0.000000   0.010791   0.000000   0.002440
+   45            -0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     11
+
+                  2.000000
+
+    1             0.000000
+    2             0.000000
+    3             0.000000
+    4             0.000000
+    5             0.000000
+    6             0.000000
+    7             0.000000
+    8             0.000000
+    9             0.000000
+   10             0.000000
+   11             0.000000
+   12             0.060512
+   13             0.000000
+   14             0.000000
+   15             0.000000
+   16             0.000000
+   17             0.000000
+   18             0.579927
+   19             0.000000
+   20             0.000000
+   21             0.000000
+   22             0.387377
+   23             0.000000
+   24             0.000000
+   25             0.000000
+   26             0.000000
+   27             0.002440
+   28             0.000000
+   29             0.000000
+   30             0.000000
+   31             0.000000
+   32             0.000000
+   33             0.579927
+   34             0.000000
+   35             0.000000
+   36             0.000000
+   37             0.387377
+   38             0.000000
+   39             0.000000
+   40             0.000000
+   41             0.000000
+   42             0.002440
+   43             0.000000
+   44             0.000000
+   45             0.000000
+
+     ATOMIC MULLIKEN POPULATION IN EACH MOLECULAR ORBITAL
+
+                      1          2          3          4          5
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             0.003187   0.000382   2.003488   0.505232   0.419022
+    2             0.998406   0.999809  -0.001744   0.747384   0.790489
+    3             0.998406   0.999809  -0.001744   0.747384   0.790489
+
+                      6          7          8          9         10
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             0.364107   0.339735   0.650616   0.650616   0.060512
+    2             0.817947   0.830132   0.674692   0.674692   0.969744
+    3             0.817947   0.830132   0.674692   0.674692   0.969744
+
+                     11
+
+                  2.000000
+
+    1             0.060512
+    2             0.969744
+    3             0.969744
+
+               ----- POPULATIONS IN EACH AO -----
+                             MULLIKEN      LOWDIN
+              1  C  1  S      1.99786     1.96750
+              2  C  1  S      0.71632     0.36209
+              3  C  1  X      0.45976     0.40014
+              4  C  1  Y      0.81560     0.69256
+              5  C  1  Z      0.45976     0.40014
+              6  C  1  S      0.12114     0.21218
+              7  C  1  X      0.19086     0.28638
+              8  C  1  Y     -0.05365     0.25882
+              9  C  1  Z      0.19086     0.28638
+             10  C  1 XX      0.00947     0.08526
+             11  C  1 YY      0.02842     0.31444
+             12  C  1 ZZ      0.06051     0.08526
+             13  C  1 XY      0.00000     0.12178
+             14  C  1 XZ      0.06051     0.00000
+             15  C  1 YZ      0.00000     0.12178
+             16  O  2  S      1.99797     1.97826
+             17  O  2  S      0.92202     0.71972
+             18  O  2  X      0.96985     0.91978
+             19  O  2  Y      0.87195     0.80524
+             20  O  2  Z      0.96985     0.91978
+             21  O  2  S      0.95143     0.45709
+             22  O  2  X      0.66136     0.66151
+             23  O  2  Y      0.42646     0.51503
+             24  O  2  Z      0.66136     0.66151
+             25  O  2 XX      0.00315     0.16904
+             26  O  2 YY      0.00945     0.19752
+             27  O  2 ZZ      0.01323     0.16904
+             28  O  2 XY      0.00000     0.01456
+             29  O  2 XZ      0.01323     0.00000
+             30  O  2 YZ      0.00000     0.01456
+             31  O  3  S      1.99797     1.97826
+             32  O  3  S      0.92202     0.71972
+             33  O  3  X      0.96985     0.91978
+             34  O  3  Y      0.87195     0.80524
+             35  O  3  Z      0.96985     0.91978
+             36  O  3  S      0.95143     0.45709
+             37  O  3  X      0.66136     0.66151
+             38  O  3  Y      0.42646     0.51503
+             39  O  3  Z      0.66136     0.66151
+             40  O  3 XX      0.00315     0.16904
+             41  O  3 YY      0.00945     0.19752
+             42  O  3 ZZ      0.01323     0.16904
+             43  O  3 XY      0.00000     0.01456
+             44  O  3 XZ      0.01323     0.00000
+             45  O  3 YZ      0.00000     0.01456
+
+          ----- MULLIKEN ATOMIC OVERLAP POPULATIONS -----
+          (OFF-DIAGONAL ELEMENTS NEED TO BE MULTIPLIED BY 2)
+
+             1           2           3
+
+    1    3.8631961
+    2    0.5971075   7.9061305
+    3    0.5971075  -0.0319436   7.9061305
+
+          TOTAL MULLIKEN AND LOWDIN ATOMIC POPULATIONS
+       ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
+    1 C             5.057411    0.942589         5.594717    0.405283
+    2 O             8.471294   -0.471294         8.202642   -0.202642
+    3 O             8.471294   -0.471294         8.202642   -0.202642
+
+          MULLIKEN SPHERICAL HARMONIC POPULATIONS
+       ATOM           S       P       D      F      G      H      I    TOTAL
+    1 C             2.84    2.06    0.16   0.00   0.00   0.00   0.00    5.06
+    2 O             3.87    4.56    0.04   0.00   0.00   0.00   0.00    8.47
+    3 O             3.87    4.56    0.04   0.00   0.00   0.00   0.00    8.47
+
+          -------------------------------
+          BOND ORDER AND VALENCE ANALYSIS     BOND ORDER THRESHOLD=0.050
+          -------------------------------
+
+                   BOND                       BOND                       BOND
+  ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER
+    1   2  1.181  1.916        1   3  1.181  1.916        2   3  2.361  0.159
+
+                       TOTAL       BONDED        FREE
+      ATOM            VALENCE     VALENCE     VALENCE
+    1 C                 3.832       3.832       0.000
+    2 O                 2.075       2.075      -0.000
+    3 O                 2.075       2.075       0.000
+
+          ---------------------
+          ELECTROSTATIC MOMENTS
+          ---------------------
+
+ POINT   1           X           Y           Z (BOHR)    CHARGE
+                -0.000000    0.000000    0.000000        0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+    -0.000000    0.000000    0.000000    0.000000
+        QXX         QYY         QZZ         QXY         QXZ         QYZ  (BUCKINGHAMS)
+     2.766871   -5.533742    2.766871    0.000000   -0.000000   -0.000000
+
+          ----------------------------------
+          DENSITY BASED MULTIPOLAR EXPANSION
+          ----------------------------------
+                23584 GRID POINTS ARE USED
+ TOTAL NUMBER OF ELECTRONS =                   22
+ TOTAL CHARGE OBTAINED FROM GRID INTEGRAL = 21.79915
+ A SCALING FACTOR OF 1.00921 IS APPLIED
+ THE EXPANSION POINTS ARE PUNCHED OUT IN THE DAT FILE
+  
+ ...... END OF PROPERTY EVALUATION ......
+ CPU     0: STEP CPU TIME=     2.69 TOTAL CPU TIME=          2.7 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.8 SECONDS, CPU UTILIZATION IS    98.22%
+
+ RUNTYP=MAKEFP IS NOW GENERATING DISTRIBUTED MULTIPOLES FOR ELECTOSTATICS
+
+
+ PROCESSING $STONE INPUT...
+ THE NUMBER OF "BOUNDARY" CORE MOS IS  0
+ THE NUMBER OF MOS WITH ZERO OCCUPATION NUMBER IS  0
+ TOTAL ELECTRON CHARGE =    -22.0000000000
+
+          ---------------------------------------------
+          DISTRIBUTED MULTIPOLAR ANALYSIS (A. J. STONE)
+          ---------------------------------------------
+
+ NET CHARGES AT POINTS                    COORDINATES
+ ---------------------                    -----------
+    #   NAME        CHARGE          X           Y           Z
+    1   ZC          6.00000     -0.00000     0.00000    -0.00000
+    2   ZO          8.00000     -0.00000    -2.23128     0.00000
+    3   ZO          8.00000     -0.00000     2.23128     0.00000
+    4   C          -3.80723     -0.00000     0.00000    -0.00000
+    5   O          -8.00925     -0.00000    -2.23128     0.00000
+    6   O          -8.00925     -0.00000     2.23128     0.00000
+    7   BO21       -1.08714     -0.00000    -1.11564    -0.00000
+    8   BO31       -1.08714     -0.00000     1.11564    -0.00000
+
+ THE DISTRIBUTED MULTIPOLE ANALYSIS IS FOR THE -ELECTRONIC- PART ONLY
+ OF THE FOLLOWING MOMENTS.  ALL QUANTITIES ARE IN ATOMIC UNITS
+
+
+ FIRST MOMENTS AT POINTS
+ -----------------------
+ NAME               X             Y             Z
+ C             -0.00000      -0.00000       0.00000
+ O              0.00000       0.43566      -0.00000
+ O              0.00000      -0.43566      -0.00000
+ BO21           0.00000      -0.13490       0.00000
+ BO31          -0.00000       0.13490       0.00000
+
+ SECOND MOMENTS AT POINTS
+ ------------------------
+ NAME           XX         YY         ZZ         XY         XZ         YZ
+ C          -1.36670   -1.37968   -1.36670   -0.00000   -0.00000   -0.00000
+ O          -3.92129   -3.39664   -3.92129    0.00000    0.00000   -0.00000
+ O          -3.92129   -3.39664   -3.92129   -0.00000    0.00000    0.00000
+ BO21       -0.84065   -0.37358   -0.84065   -0.00000   -0.00000   -0.00000
+ BO31       -0.84065   -0.37358   -0.84065    0.00000   -0.00000    0.00000
+
+ THIRD MOMENTS AT POINTS
+ -----------------------
+ NAME           XXX        YYY        ZZZ        XXY        XXZ        XYY
+                YYZ        XZZ        YZZ        XYZ
+ C          -0.00000    0.00000    0.00000    0.00000    0.00000   -0.00000
+             0.00000   -0.00000   -0.00000   -0.00000
+ O           0.00000    0.86114   -0.00000    0.25521   -0.00000    0.00000
+            -0.00000    0.00000    0.25521    0.00000
+ O           0.00000   -0.86114   -0.00000   -0.25521   -0.00000    0.00000
+            -0.00000    0.00000   -0.25521   -0.00000
+ BO21        0.00000   -0.36802    0.00000   -0.12348    0.00000    0.00000
+             0.00000    0.00000   -0.12348    0.00000
+ BO31       -0.00000    0.36802    0.00000    0.12348    0.00000   -0.00000
+             0.00000   -0.00000    0.12348   -0.00000
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          2.7 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.8 SECONDS, CPU UTILIZATION IS    98.01%
+ DDI: Creating Array [0] - 36 x 36 = 1296 words.
+ DDI: Creating Array [1] - 1035 x 36 = 37260 words.
+
+ RUNTYP=MAKEFP IS NOW GENERATING LOCALIZED ORBITALS
+               AND DISTRIBUTED POLARIZABILITY TENSORS
+               AND DATA FOR DISPERSION.
+
+
+          ---------------------------------------
+          EDMISTON-RUEDENBERG ENERGY LOCALIZATION
+          ---------------------------------------
+          C.EDMISTON AND K.RUEDENBERG, REV.MOD.PHYS. 35, 457-465 (1963)
+
+     --------------------------------------------
+     PARTIAL TWO ELECTRON INTEGRAL TRANSFORMATION
+     --------------------------------------------
+
+ NUMBER OF CORE MOLECULAR ORBITALS     =    3
+ NUMBER OF OCCUPIED MOLECULAR ORBITALS =   11
+ TOTAL NUMBER OF MOLECULAR ORBITALS    =   42
+ TOTAL NUMBER OF ATOMIC ORBITALS       =   45
+ THRESHOLD FOR KEEPING TRANSFORMED 2E- INTEGRALS = 1.000E-09
+
+ -------------------------------     ------------------------------
+ DISTRIBUTED DATA TRANSFORMATION     PROGRAM WRITTEN BY G. FLETCHER
+ -------------------------------     ------------------------------
+
+ THE DISTRIBUTED MEMORY REQUIRED FOR THIS STEP IS MEMDDI=         1 MWORDS
+ CREATING DISTRIBUTED STORAGE FOR [OCC OCC|OCC OCC] INTEGRALS
+ CREATING WORKSPACE OF SIZE VVOO
+ FOR   16 PROCESSORS, THE REPLICATED MEMORY NEEDED IS       84131 WORDS.
+
+      DIRECT 4-INDEX TRANSFORMATION 
+      SCHWARZ INEQUALITY TEST SKIPPED          0 INTEGRAL BLOCKS
+ ... END OF INTEGRAL TRANSFORMATION ...
+ CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          2.7 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.8 SECONDS, CPU UTILIZATION IS    97.81%
+
+          ---------------------------------------
+          EDMISTON-RUEDENBERG ENERGY LOCALIZATION
+          ---------------------------------------
+          C.EDMISTON AND K.RUEDENBERG, REV.MOD.PHYS. 35, 457-465 (1963)
+
+ THIS LOCALIZATION REQUIRES      7120 WORDS OF MEMORY.
+ THE ENERGY LOCALIZATION STEP RUNS IN SERIAL, BUT WILL USE WAVEFUNCTION
+ AND TRANSFORMED INTEGRAL INFORMATION PREVIOUSLY GENERATED IN PARALLEL MODE.
+ DESTROYING DDI ARRAY [ 0] CONTAINING [OO|OO] INTEGRALS
+ THIS LOCALIZATION HAS   11 ORBITALS, OF WHICH   3 ARE FROZEN.
+
+ INITIAL LOCALIZATION SUMS ARE
+     DIAGONAL SUM D=        4.0576143628
+      COULOMB SUM C=       30.2688225916
+     EXCHANGE SUM X=        7.8855653487
+
+ BEGINNING 2X2 JACOBI ROTATIONS...
+         21 PAIR ROTATIONS WHEN CONVERGED TO    1.00E-01
+        199 PAIR ROTATIONS WHEN CONVERGED TO    1.00E-02
+        622 PAIR ROTATIONS WHEN CONVERGED TO    1.00E-03
+       3156 PAIR ROTATIONS WHEN CONVERGED TO    1.00E-04
+        344 PAIR ROTATIONS WHEN CONVERGED TO    1.00E-05
+        327 PAIR ROTATIONS WHEN CONVERGED TO    1.00E-06
+       4669 TOTAL PAIR ROTATIONS REQUIRED TO CONVERGE TO    1.00E-06
+
+   FINAL LOCALIZATION SUMS ARE
+     DIAGONAL SUM D=        6.4582818973
+      COULOMB SUM C=       30.2688225916
+     EXCHANGE SUM X=        7.8855653487
+ FOCK OPERATOR FOR THE LOCALIZED ORBITALS IS
+
+             1           2           3           4           5
+
+    1   -0.9703622
+    2   -0.0282825  -0.9703664
+    3    0.1560190  -0.0505954  -0.7789625
+    4    0.0282870   0.3438268  -0.0318162  -0.9703707
+    5    0.0505966  -0.1560194   0.0014260   0.1560200  -0.7789625
+    6   -0.0318181  -0.1560207   0.0014212   0.1560207  -0.1650682
+    7   -0.3438270  -0.0282875   0.1560205   0.0282834  -0.0318150
+    8   -0.1560199  -0.0318170   0.1650679  -0.0505957  -0.0014212
+
+             6           7           8
+
+    6   -0.7789624
+    7    0.0505947  -0.9703754
+    8   -0.0014250  -0.1560207  -0.7789619
+
+ EDMISTON-RUEDENBERG ENERGY LOCALIZED ORBITALS
+
+                      1          2          3          4          5
+
+    1  C  1  S    0.000000  -0.000265  -0.996205   0.096246   0.096247
+    2  C  1  S    0.000000   0.000395  -0.024578  -0.201504  -0.201506
+    3  C  1  X    0.000000   0.000000   0.000000  -0.041428  -0.177766
+    4  C  1  Y   -0.000149   0.000000   0.000000  -0.232260   0.232262
+    5  C  1  Z    0.000000   0.000000  -0.000000  -0.177769   0.041437
+    6  C  1  S    0.000000  -0.005224   0.000537  -0.051673  -0.051674
+    7  C  1  X    0.000000   0.000000   0.000000  -0.015705  -0.067391
+    8  C  1  Y   -0.011093   0.000000   0.000000   0.018049  -0.018049
+    9  C  1  Z    0.000000  -0.000000  -0.000000  -0.067392   0.015709
+   10  C  1 XX    0.000000  -0.001009   0.001657   0.013455   0.013455
+   11  C  1 YY    0.000000   0.002019  -0.003314  -0.026910  -0.026910
+   12  C  1 ZZ    0.000000  -0.001009   0.001657   0.013455   0.013455
+   13  C  1 XY    0.000000   0.000000   0.000000  -0.007404   0.031771
+   14  C  1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  C  1 YZ   -0.000000   0.000000   0.000000  -0.031772  -0.007406
+   16  O  2  S    0.704228  -0.704152   0.000396  -0.005074   0.086570
+   17  O  2  S    0.016786  -0.016125  -0.000163   0.012010  -0.178692
+   18  O  2  X    0.000000   0.000000   0.000000   0.006705  -0.396562
+   19  O  2  Y    0.001514  -0.002131   0.000408   0.026535  -0.265236
+   20  O  2  Z    0.000000   0.000000  -0.000000   0.028772   0.092439
+   21  O  2  S   -0.013322   0.006139   0.003395   0.014036  -0.115588
+   22  O  2  X    0.000000   0.000000   0.000000   0.010926  -0.275292
+   23  O  2  Y   -0.003455   0.002036   0.002994   0.006409  -0.127768
+   24  O  2  Z   -0.000000   0.000000   0.000000   0.046887   0.064171
+   25  O  2 XX   -0.000014   0.000185  -0.000467  -0.001018   0.009533
+   26  O  2 YY    0.000028  -0.000371   0.000935   0.002037  -0.019066
+   27  O  2 ZZ   -0.000014   0.000185  -0.000467  -0.001018   0.009533
+   28  O  2 XY    0.000000   0.000000   0.000000  -0.001052  -0.029653
+   29  O  2 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  O  2 YZ   -0.000000   0.000000   0.000000  -0.004514   0.006912
+   31  O  3  S   -0.704228  -0.704152   0.000396   0.086570  -0.005074
+   32  O  3  S   -0.016786  -0.016125  -0.000163  -0.178693   0.012010
+   33  O  3  X    0.000000   0.000000   0.000000  -0.092417   0.028770
+   34  O  3  Y    0.001514   0.002131  -0.000408   0.265232  -0.026535
+   35  O  3  Z    0.000000   0.000000  -0.000000  -0.396570  -0.006707
+   36  O  3  S    0.013322   0.006139   0.003395  -0.115589   0.014036
+   37  O  3  X    0.000000   0.000000   0.000000  -0.064156   0.046885
+   38  O  3  Y   -0.003455  -0.002036  -0.002994   0.127766  -0.006409
+   39  O  3  Z    0.000000   0.000000   0.000000  -0.275298  -0.010930
+   40  O  3 XX    0.000014   0.000185  -0.000467   0.009533  -0.001018
+   41  O  3 YY   -0.000028  -0.000371   0.000935  -0.019066   0.002037
+   42  O  3 ZZ    0.000014   0.000185  -0.000467   0.009533  -0.001018
+   43  O  3 XY    0.000000   0.000000   0.000000   0.006911   0.004514
+   44  O  3 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   45  O  3 YZ   -0.000000   0.000000  -0.000000   0.029653  -0.001052
+
+                      6          7          8          9         10
+
+    1  C  1  S    0.025987  -0.096248  -0.025988  -0.025987   0.096249
+    2  C  1  S   -0.076202   0.201509   0.076202   0.076200  -0.201511
+    3  C  1  X   -0.164649  -0.177764   0.038380  -0.038379   0.041428
+    4  C  1  Y   -0.073364  -0.232265  -0.073363  -0.073362  -0.232268
+    5  C  1  Z    0.038368   0.041436   0.164646  -0.164648   0.177765
+    6  C  1  S   -0.063490   0.051675   0.063490   0.063489  -0.051676
+    7  C  1  X   -0.062418  -0.067390   0.014550  -0.014549   0.015705
+    8  C  1  Y   -0.005604   0.018049  -0.005604  -0.005604   0.018050
+    9  C  1  Z    0.014545   0.015708   0.062417  -0.062418   0.067391
+   10  C  1 XX   -0.001706  -0.013455   0.001705   0.001706   0.013455
+   11  C  1 YY    0.003411   0.026910  -0.003411  -0.003411  -0.026911
+   12  C  1 ZZ   -0.001706  -0.013455   0.001705   0.001706   0.013455
+   13  C  1 XY   -0.034302   0.031771  -0.007996   0.007996   0.007404
+   14  C  1 XZ    0.000000   0.000000  -0.000000   0.000000  -0.000000
+   15  C  1 YZ    0.007994  -0.007406  -0.034302   0.034302   0.031771
+   16  O  2  S   -0.003173  -0.086570   0.135731   0.135730  -0.005074
+   17  O  2  S    0.007067   0.178692  -0.313313  -0.313312   0.012010
+   18  O  2  X    0.059285  -0.396558   0.093225  -0.093223  -0.006704
+   19  O  2  Y    0.013334   0.265240   0.258619   0.258616   0.026536
+   20  O  2  Z   -0.013817   0.092436   0.399932  -0.399935  -0.028770
+   21  O  2  S    0.014329   0.115586  -0.380209  -0.380207   0.014036
+   22  O  2  X    0.068148  -0.275289   0.065198  -0.065196  -0.010926
+   23  O  2  Y    0.009952   0.127771   0.142708   0.142707   0.006409
+   24  O  2  Z   -0.015882   0.064169   0.279696  -0.279698  -0.046885
+   25  O  2 XX   -0.000213  -0.009533  -0.006244  -0.006244  -0.001018
+   26  O  2 YY    0.000425   0.019067   0.012488   0.012488   0.002037
+   27  O  2 ZZ   -0.000213  -0.009533  -0.006244  -0.006244  -0.001018
+   28  O  2 XY   -0.002251  -0.029653   0.006852  -0.006851   0.001052
+   29  O  2 XZ    0.000000   0.000000  -0.000000   0.000000  -0.000000
+   30  O  2 YZ    0.000525   0.006912   0.029393  -0.029394   0.004513
+   31  O  3  S   -0.135731   0.005074   0.003172   0.003172   0.086570
+   32  O  3  S    0.313313  -0.012011  -0.007067  -0.007067  -0.178692
+   33  O  3  X   -0.399938   0.028771  -0.013818   0.013819   0.092417
+   34  O  3  Y    0.258619   0.026536   0.013333   0.013335   0.265244
+   35  O  3  Z    0.093199  -0.006708  -0.059285   0.059285   0.396559
+   36  O  3  S    0.380209  -0.014036  -0.014329  -0.014328  -0.115585
+   37  O  3  X   -0.279700   0.046885  -0.015885   0.015885   0.064155
+   38  O  3  Y    0.142709   0.006409   0.009952   0.009952   0.127772
+   39  O  3  Z    0.065180  -0.010930  -0.068147   0.068147   0.275290
+   40  O  3 XX    0.006244   0.001018   0.000213   0.000213   0.009533
+   41  O  3 YY   -0.012488  -0.002037  -0.000425  -0.000425  -0.019067
+   42  O  3 ZZ    0.006244   0.001018   0.000213   0.000213   0.009533
+   43  O  3 XY    0.029394   0.004513  -0.000525   0.000525  -0.006910
+   44  O  3 XZ    0.000000   0.000000  -0.000000   0.000000  -0.000000
+   45  O  3 YZ   -0.006850  -0.001052  -0.002251   0.002251  -0.029653
+
+                     11
+
+    1  C  1  S   -0.025987
+    2  C  1  S    0.076200
+    3  C  1  X   -0.164649
+    4  C  1  Y    0.073362
+    5  C  1  Z    0.038372
+    6  C  1  S    0.063489
+    7  C  1  X   -0.062419
+    8  C  1  Y    0.005604
+    9  C  1  Z    0.014547
+   10  C  1 XX    0.001706
+   11  C  1 YY   -0.003411
+   12  C  1 ZZ    0.001706
+   13  C  1 XY   -0.034302
+   14  C  1 XZ    0.000000
+   15  C  1 YZ    0.007994
+   16  O  2  S    0.003172
+   17  O  2  S   -0.007067
+   18  O  2  X    0.059285
+   19  O  2  Y   -0.013334
+   20  O  2  Z   -0.013818
+   21  O  2  S   -0.014329
+   22  O  2  X    0.068148
+   23  O  2  Y   -0.009952
+   24  O  2  Z   -0.015883
+   25  O  2 XX    0.000213
+   26  O  2 YY   -0.000425
+   27  O  2 ZZ    0.000213
+   28  O  2 XY   -0.002251
+   29  O  2 XZ    0.000000
+   30  O  2 YZ    0.000525
+   31  O  3  S    0.135730
+   32  O  3  S   -0.313312
+   33  O  3  X   -0.399938
+   34  O  3  Y   -0.258616
+   35  O  3  Z    0.093208
+   36  O  3  S   -0.380207
+   37  O  3  X   -0.279701
+   38  O  3  Y   -0.142707
+   39  O  3  Z    0.065186
+   40  O  3 XX   -0.006244
+   41  O  3 YY    0.012488
+   42  O  3 ZZ   -0.006244
+   43  O  3 XY    0.029394
+   44  O  3 XZ    0.000000
+   45  O  3 YZ   -0.006850
+ ... DONE WITH ENERGY LOCALIZATION ...
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          2.7 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.8 SECONDS, CPU UTILIZATION IS    97.80%
+ NORMALIZED MULL. POP. FOR EACH LMO
+   1   0.002 0.499 0.499
+   2   0.000 0.500 0.500
+   3   1.002-0.001-0.001
+   4   0.302-0.002 0.699
+   5   0.302 0.699-0.002
+   6   0.079 0.004 0.917
+   7   0.302 0.699-0.002
+   8   0.079 0.917 0.004
+   9   0.079 0.917 0.004
+  10   0.302-0.002 0.699
+  11   0.079 0.004 0.917
+
+ ATOMS ARE ASSIGNED TO THE LMOS BASED ON THEIR MULLIKEN POPULATION.
+ (MULLIKEN POP. THRESHOLD(VMTOL)=0.150 WAS USED)
+ ORBITAL   1 BELONGS TO ATOM(S)   2  3
+ ORBITAL   2 BELONGS TO ATOM(S)   2  3
+ ORBITAL   3 BELONGS TO ATOM(S)   1
+ ORBITAL   4 BELONGS TO ATOM(S)   1  3
+ ORBITAL   5 BELONGS TO ATOM(S)   1  2
+ ORBITAL   6 BELONGS TO ATOM(S)   3
+ ORBITAL   7 BELONGS TO ATOM(S)   1  2
+ ORBITAL   8 BELONGS TO ATOM(S)   2
+ ORBITAL   9 BELONGS TO ATOM(S)   2
+ ORBITAL  10 BELONGS TO ATOM(S)   1  3
+ ORBITAL  11 BELONGS TO ATOM(S)   3
+
+  LCD DIPOLES 
+
+ LMO    XP        YP        ZP        MUX       MUY       MUZ     TOTAL
+   1 -0.00000   0.00000   0.00000  -0.00000  -0.00000  -0.00000   0.00000
+   2 -0.00000  -0.00000   0.00000  -0.00000   0.00000   0.00000   0.00000
+   3  0.00000   0.00000  -0.00000  -0.00000  -0.00000  -0.00000   0.00000
+   4  0.11000   1.51575   0.47201  -0.55918  -2.03398  -2.39947   3.19487
+   5  0.47200  -1.51574  -0.11002  -2.39943   2.03395   0.55931   3.19484
+   6 -0.44355   2.29466   0.10336   2.25480  -0.32222  -0.52545   2.33753
+   7 -0.47200  -1.51574   0.11002   2.39941   2.03392  -0.55929   3.19480
+   8 -0.10339  -2.29466  -0.44354   0.52559   0.32221   2.25477   2.33753
+   9  0.10339  -2.29466   0.44355  -0.52558   0.32219  -2.25479   2.33754
+  10 -0.11000   1.51573  -0.47200   0.55918  -2.03389   2.39942   3.19478
+  11  0.44355   2.29465  -0.10337  -2.25480  -0.32218   0.52549   2.33754
+
+     ------------------------------
+     CPHF RESPONSE SOLUTION OPTIONS
+     ------------------------------
+     POLAR  =       F     NWORD  =       0
+     CPHF   =AO      
+
+          --------------------
+          2 ELECTRON INTEGRALS
+          --------------------
+
+ THE -PK- OPTION IS OFF, THE INTEGRALS ARE NOT IN SUPERMATRIX FORM.
+ STORING   15000 INTEGRALS/RECORD ON DISK, USING 12 BYTES/INTEGRAL.
+ TWO ELECTRON INTEGRAL EVALUATION REQUIRES   90474 WORDS OF MEMORY.
+ II,JST,KST,LST =  1  1  1  1 NREC =         1 INTLOC =    1
+ II,JST,KST,LST =  2  1  1  1 NREC =         1 INTLOC =    2
+ II,JST,KST,LST =  3  1  1  1 NREC =         1 INTLOC =   34
+ II,JST,KST,LST =  4  1  1  1 NREC =         1 INTLOC =  214
+ II,JST,KST,LST =  5  1  1  1 NREC =         1 INTLOC = 1189
+ II,JST,KST,LST =  6  1  1  1 NREC =         1 INTLOC = 1189
+ II,JST,KST,LST =  7  1  1  1 NREC =         1 INTLOC = 1189
+ II,JST,KST,LST =  8  1  1  1 NREC =         1 INTLOC = 1189
+ II,JST,KST,LST =  9  1  1  1 NREC =         1 INTLOC = 1189
+ II,JST,KST,LST = 10  1  1  1 NREC =         1 INTLOC = 1927
+ II,JST,KST,LST = 11  1  1  1 NREC =         1 INTLOC = 8091
+ II,JST,KST,LST = 12  1  1  1 NREC =         2 INTLOC = 8419
+ TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =               74744
+          5 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.02 TOTAL CPU TIME =          2.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.8 SECONDS, CPU UTILIZATION IS    97.79%
+
+     --------------------------------------------
+     PARTIAL TWO ELECTRON INTEGRAL TRANSFORMATION
+     --------------------------------------------
+
+ NUMBER OF CORE MOLECULAR ORBITALS     =    0
+ NUMBER OF OCCUPIED MOLECULAR ORBITALS =   11
+ TOTAL NUMBER OF MOLECULAR ORBITALS    =   42
+ TOTAL NUMBER OF ATOMIC ORBITALS       =   45
+ THRESHOLD FOR KEEPING TRANSFORMED 2E- INTEGRALS = 1.000E-09
+ AO INTEGRALS WILL BE READ IN FROM DISK...
+
+ PLAN A: REQUIREMENTS FOR FULLY IN-MEMORY TRANSFORMATION:
+ # OF WORDS AVAILABLE =             99999999
+ # OF WORDS NEEDED    =               582557
+
+ PARALLEL ONLY WORKS WITH THE SEGMENTED ALGORITHM.
+ ADJUSTING MEMORY TO USE SEGMENTED ALGORITHM.
+
+
+ PLAN B: REQUIREMENTS FOR THE SEGMENTED TRANSFORMATION:
+       MINIMUM=         116807 WORDS FOR 1 MOLECULAR ORBITAL PER PASS
+       MAXIMUM=         116807 WORDS FOR ALL MOLECULAR ORBITALS IN 1 PASS
+              (          46575 EXTRA WORDS INCLUDES 1 EXTRA ORBITAL/PASS)
+ THIS RUN USES=         116807 WORDS,
+ DISTRIBUTING  11 PASSES EACH CONTAINING     1 ORBITALS OVER  16 PROCESSORS.
+
+ CHOOSING SEGMENTED PARTIAL TRANSFORMATION...
+ PASS #   1 TOOK        0.00 SECONDS.
+ ASSIGNING PASS #   2 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #   3 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #   4 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #   5 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #   6 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #   7 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #   8 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #   9 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #  10 TO A DIFFERENT PROCESSOR.
+ ASSIGNING PASS #  11 TO A DIFFERENT PROCESSOR.
+ TOTAL NUMBER OF TRANSFORMED 2E- INTEGRALS KEPT =        16855
+ ... END OF INTEGRAL TRANSFORMATION ...
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          2.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.8 SECONDS, CPU UTILIZATION IS    97.64%
+
+     -------------------------------------------
+     COUPLED-PERTURBED CLOSED SHELL HARTREE-FOCK
+     -------------------------------------------
+ THE CPHF HAS     341 INDEPENDENT ORBITAL ROTATIONS.
+ CHOOSING OUT OF MEMORY CPHF ALGORITHM,
+ -A- WILL BE FORMED IN    1 SLICES OF    341 COLUMNS.
+         -B- WILL USE     16548 WORDS,
+ -A- AND -U- WILL USE    153813 WORDS,
+            THERE ARE  99999999 WORDS AVAILABLE.
+ IN MEMORY FORMATION OF -A- WOULD REQUIRE         0 WORDS
+        TIME FOR   -B-  =        0.002
+        TIME FOR   -A-  =        0.004
+ BICONJUGATE GRADIENT SOLVER     CONV. TOLERANCE=1.00E-07
+ ITER   1 IMPROVED    3 RESPONSES, MAX RESIDUE=  1.0586258E-02
+ ITER   2 IMPROVED    3 RESPONSES, MAX RESIDUE=  4.7569121E-04
+ ITER   3 IMPROVED    3 RESPONSES, MAX RESIDUE=  4.4160920E-05
+ ITER   4 IMPROVED    3 RESPONSES, MAX RESIDUE=  1.3729459E-06
+ ITER   5 IMPROVED    3 RESPONSES, MAX RESIDUE=  3.7354151E-08
+        TIME FOR  -U-   =        0.002
+ SOLVING FOR ALL   3 UNIQUE RESPONSES TOOK   15 ITERATIONS.
+ CONJUGATE GRADIENT SOLVER MADE  16 READS OF THE EXTERNALLY STORED -A-
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000299344    0.000000000    0.000000000
+           UY     0.000000000    0.000893952    0.000000000
+           UZ     0.000000000    0.000000000    0.000299344
+
+           MEAN ALPHA POLARIZABILITY =     0.000497547
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061261691   -0.025705273    0.029271300
+           UY    -0.021191597    0.347512083   -0.090934903
+           UZ     0.029271285   -0.110302906    0.180045319
+
+           MEAN ALPHA POLARIZABILITY =     0.196273031
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.180040320    0.110302669   -0.029277474
+           UY     0.090934743    0.347507121   -0.021197106
+           UZ    -0.029277539   -0.025712029    0.061265161
+
+           MEAN ALPHA POLARIZABILITY =     0.196270867
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.212565075   -0.145654438   -0.028463818
+           UY    -0.191867067    0.445524001    0.044711792
+           UZ    -0.028463827    0.033942748    0.097053440
+
+           MEAN ALPHA POLARIZABILITY =     0.251714172
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.180038298   -0.110303985   -0.029276228
+           UY    -0.090936378    0.347504445    0.021197060
+           UZ    -0.029276163    0.025711160    0.061265011
+
+           MEAN ALPHA POLARIZABILITY =     0.196269251
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.097057300    0.033951929    0.028471556
+           UY     0.044724033    0.445524044    0.191864346
+           UZ     0.028471554    0.145652030    0.212561546
+
+           MEAN ALPHA POLARIZABILITY =     0.251714297
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.097056036   -0.033950636    0.028470858
+           UY    -0.044722384    0.445525628   -0.191863864
+           UZ     0.028470861   -0.145652023    0.212562489
+
+           MEAN ALPHA POLARIZABILITY =     0.251714717
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061262426    0.025706465    0.029270312
+           UY     0.021192796    0.347499431    0.090938200
+           UZ     0.029270328    0.110306173    0.180039147
+
+           MEAN ALPHA POLARIZABILITY =     0.196267001
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.212565047    0.145653270   -0.028466508
+           UY     0.191865855    0.445526005   -0.044715526
+           UZ    -0.028466499   -0.033945155    0.097054085
+
+           MEAN ALPHA POLARIZABILITY =     0.251715045
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     1.102145536    0.000000000    0.000000000
+           UY     0.000000000    3.173016710   -0.000000000
+           UZ     0.000000000   -0.000000000    1.102145542
+
+           MEAN ALPHA POLARIZABILITY =     1.792435930
+
+
+          -----------------------------------------------
+           LOCALIZED ALPHA POLARIZABILITY TENSORS FOR 
+           LONE PAIRS AND BONDS PROJECTED ONTO THE Z-AXIS 
+          -----------------------------------------------
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061261691    0.029271300   -0.025705273
+           UY     0.029271285    0.180045319   -0.110302906
+           UZ    -0.021191597   -0.090934903    0.347512083
+
+           MEAN ALPHA POLARIZABILITY =     0.196273031
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.180040320    0.029277474    0.110302669
+           UY     0.029277539    0.061265161    0.025712029
+           UZ     0.090934743    0.021197106    0.347507121
+
+           MEAN ALPHA POLARIZABILITY =     0.196270867
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.393594744    0.009738582    0.221208636
+           UY     0.009738489    0.090733231    0.007105851
+           UZ     0.173782288    0.005582420    0.270814542
+
+           MEAN ALPHA POLARIZABILITY =     0.251714172
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.180038298    0.029276228   -0.110303985
+           UY     0.029276163    0.061265011   -0.025711161
+           UZ    -0.090936378   -0.021197060    0.347504445
+
+           MEAN ALPHA POLARIZABILITY =     0.196269251
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.315279672    0.132967552   -0.190506692
+           UY     0.132967672    0.169049168   -0.112653879
+           UZ    -0.149662371   -0.088501078    0.270814051
+
+           MEAN ALPHA POLARIZABILITY =     0.251714297
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.315288534    0.132968015    0.190507018
+           UY     0.132967995    0.169045395    0.112649419
+           UZ     0.149662726    0.088497638    0.270810223
+
+           MEAN ALPHA POLARIZABILITY =     0.251714717
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061262426    0.029270312    0.025706465
+           UY     0.029270328    0.180039147    0.110306173
+           UZ     0.021192796    0.090938200    0.347499431
+
+           MEAN ALPHA POLARIZABILITY =     0.196267001
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.393602525    0.009738727   -0.221206665
+           UY     0.009738987    0.090732668   -0.007105759
+           UZ    -0.173780059   -0.005582273    0.270809944
+
+           MEAN ALPHA POLARIZABILITY =     0.251715045
+ .... DONE WITH STATIC POLARIZABILITY ....
+ CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          2.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.8 SECONDS, CPU UTILIZATION IS    97.47%
+ USING   GMRES    SOLVER FOR LINEAR SYSTEM OF SIZE       341
+
+ A TOTAL OF  12 IMAGINARY FREQUENCY POLARIZABILITIES ARE TO BE FOUND
+ ALLOCATING MEMORY FOR GMRES SOLVER
+ CALCULATING H2*H1 DIAGONAL
+ WIDTH=                  341 NROT=                  341
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   0.0027916I (A.U.)
+ GMRES CONVERGED IN                    47 ITERATIONS
+ GMRES CONVERGED IN                    46 ITERATIONS
+ GMRES CONVERGED IN                    19 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000300473    0.000000000    0.000000000
+           UY     0.000000000    0.000899397    0.000000000
+           UZ     0.000000000    0.000000000    0.000300473
+
+           MEAN ALPHA POLARIZABILITY =     0.000500115
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061263261   -0.025702173    0.029269223
+           UY    -0.021184124    0.347502751   -0.090902837
+           UZ     0.029269224   -0.110289896    0.180038526
+
+           MEAN ALPHA POLARIZABILITY =     0.196268179
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.180033463    0.110289366   -0.029275397
+           UY     0.090902676    0.347497792   -0.021189631
+           UZ    -0.029275396   -0.025708631    0.061266715
+
+           MEAN ALPHA POLARIZABILITY =     0.196265990
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.212555095   -0.145646638   -0.028461863
+           UY    -0.191819600    0.445486189    0.044700730
+           UZ    -0.028461862    0.033940743    0.097051389
+
+           MEAN ALPHA POLARIZABILITY =     0.251697558
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.180031441   -0.110290682   -0.029274151
+           UY    -0.090904312    0.347495120    0.021189585
+           UZ    -0.029274151    0.025708355    0.061266595
+
+           MEAN ALPHA POLARIZABILITY =     0.196264385
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.097055252    0.033950110    0.028469601
+           UY     0.044712968    0.445486232    0.191816880
+           UZ     0.028469601    0.145644414    0.212551574
+
+           MEAN ALPHA POLARIZABILITY =     0.251697686
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.097053987   -0.033948818    0.028468903
+           UY    -0.044711320    0.445487814   -0.191816398
+           UZ     0.028468903   -0.145644034    0.212552498
+
+           MEAN ALPHA POLARIZABILITY =     0.251698100
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061263996    0.025703365    0.029268236
+           UY     0.021185323    0.347490110    0.090906133
+           UZ     0.029268236    0.110292571    0.180032224
+
+           MEAN ALPHA POLARIZABILITY =     0.196262110
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.212555067    0.145645470   -0.028464553
+           UY     0.191818389    0.445488190   -0.044704463
+           UZ    -0.028464554   -0.033943523    0.097052039
+
+           MEAN ALPHA POLARIZABILITY =     0.251698432
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     1.102112034    0.000000000    0.000000000
+           UY     0.000000000    3.172833594   -0.000000000
+           UZ     0.000000000   -0.000000000    1.102112034
+
+           MEAN ALPHA POLARIZABILITY =     1.792352554
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   0.0151066I (A.U.)
+ GMRES CONVERGED IN                    13 ITERATIONS
+ GMRES CONVERGED IN                    14 ITERATIONS
+ GMRES CONVERGED IN                    13 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000300651    0.000000000    0.000000000
+           UY     0.000000000    0.000899766    0.000000000
+           UZ     0.000000000    0.000000000    0.000300651
+
+           MEAN ALPHA POLARIZABILITY =     0.000500356
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061255290   -0.025685881    0.029255761
+           UY    -0.021172069    0.347323416   -0.090851109
+           UZ     0.029255761   -0.110219986    0.179975927
+
+           MEAN ALPHA POLARIZABILITY =     0.196184878
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.179970865    0.110219457   -0.029261932
+           UY     0.090850949    0.347318463   -0.021177573
+           UZ    -0.029261931   -0.025692335    0.061258743
+
+           MEAN ALPHA POLARIZABILITY =     0.196182691
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.212482360   -0.145564425   -0.028449084
+           UY    -0.191693401    0.445233818    0.044671322
+           UZ    -0.028449082    0.033921585    0.097030516
+
+           MEAN ALPHA POLARIZABILITY =     0.251582232
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.179968844   -0.110220772   -0.029260686
+           UY    -0.090852583    0.347315796    0.021177527
+           UZ    -0.029260687    0.025692060    0.061258623
+
+           MEAN ALPHA POLARIZABILITY =     0.196181088
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.097034377    0.033930947    0.028456818
+           UY     0.044683551    0.445233861    0.191690683
+           UZ     0.028456818    0.145562202    0.212478841
+
+           MEAN ALPHA POLARIZABILITY =     0.251582360
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.097033113   -0.033929655    0.028456121
+           UY    -0.044681904    0.445235441   -0.191690201
+           UZ     0.028456120   -0.145561822    0.212479764
+
+           MEAN ALPHA POLARIZABILITY =     0.251582773
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061256025    0.025687073    0.029254774
+           UY     0.021173267    0.347310791    0.090854403
+           UZ     0.029254774    0.110222660    0.179969627
+
+           MEAN ALPHA POLARIZABILITY =     0.196178814
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.212482332    0.145563257   -0.028451773
+           UY     0.191692190    0.445235817   -0.044675052
+           UZ    -0.028451774   -0.033924363    0.097031165
+
+           MEAN ALPHA POLARIZABILITY =     0.251583104
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     1.101783858    0.000000000    0.000000000
+           UY     0.000000000    3.171107168   -0.000000000
+           UZ     0.000000000   -0.000000000    1.101783858
+
+           MEAN ALPHA POLARIZABILITY =     1.791558294
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   0.0390017I (A.U.)
+ GMRES CONVERGED IN                    13 ITERATIONS
+ GMRES CONVERGED IN                    14 ITERATIONS
+ GMRES CONVERGED IN                    14 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000301687    0.000000000    0.000000000
+           UY     0.000000000    0.000901916    0.000000000
+           UZ     0.000000000    0.000000000    0.000301687
+
+           MEAN ALPHA POLARIZABILITY =     0.000501764
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061208659   -0.025590716    0.029177086
+           UY    -0.021101634    0.346276270   -0.090548863
+           UZ     0.029177086   -0.109811624    0.179610030
+
+           MEAN ALPHA POLARIZABILITY =     0.195698319
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.179604980    0.109811097   -0.029183240
+           UY     0.090548704    0.346271350   -0.021107118
+           UZ    -0.029183240   -0.025597145    0.061212101
+
+           MEAN ALPHA POLARIZABILITY =     0.195696144
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.212057157   -0.145084051   -0.028374391
+           UY    -0.190956422    0.443760438    0.044499579
+           UZ    -0.028374390    0.033809641    0.096908429
+
+           MEAN ALPHA POLARIZABILITY =     0.250908675
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.179602964   -0.109812408   -0.029181998
+           UY    -0.090550332    0.346268710    0.021107072
+           UZ    -0.029181998    0.025596872    0.061211981
+
+           MEAN ALPHA POLARIZABILITY =     0.195694551
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.096912280    0.033818972    0.028382105
+           UY     0.044511762    0.443760478    0.190953713
+           UZ     0.028382105    0.145081837    0.212053648
+
+           MEAN ALPHA POLARIZABILITY =     0.250908802
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.096911020   -0.033817684    0.028381410
+           UY    -0.044510122    0.443762046   -0.190953234
+           UZ     0.028381409   -0.145081457    0.212054569
+
+           MEAN ALPHA POLARIZABILITY =     0.250909211
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061209388    0.025591903    0.029176102
+           UY     0.021102828    0.346263737    0.090552146
+           UZ     0.029176101    0.109814288    0.179603743
+
+           MEAN ALPHA POLARIZABILITY =     0.195692290
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.212057129    0.145082888   -0.028377073
+           UY     0.190955215    0.443762418   -0.044503295
+           UZ    -0.028377074   -0.033812411    0.096909077
+
+           MEAN ALPHA POLARIZABILITY =     0.250909542
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     1.099865265    0.000000000    0.000000000
+           UY     0.000000000    3.161027364   -0.000000000
+           UZ     0.000000000   -0.000000000    1.099865265
+
+           MEAN ALPHA POLARIZABILITY =     1.786919298
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   0.0779961I (A.U.)
+ GMRES CONVERGED IN                    14 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000305294    0.000000000    0.000000000
+           UY     0.000000000    0.000909333    0.000000000
+           UZ     0.000000000    0.000000000    0.000305294
+
+           MEAN ALPHA POLARIZABILITY =     0.000506641
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061045713   -0.025260271    0.028903372
+           UY    -0.020856782    0.342645382   -0.089498178
+           UZ     0.028903372   -0.108393665    0.178336345
+
+           MEAN ALPHA POLARIZABILITY =     0.194009147
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.178331339    0.108393144   -0.028909468
+           UY     0.089498022    0.342640577   -0.020862201
+           UZ    -0.028909468   -0.025266619    0.061049121
+
+           MEAN ALPHA POLARIZABILITY =     0.194007013
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.210576181   -0.143414149   -0.028114444
+           UY    -0.188399803    0.438654613    0.043903795
+           UZ    -0.028114443    0.033420496    0.096482371
+
+           MEAN ALPHA POLARIZABILITY =     0.248571055
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.178329339   -0.108394440   -0.028908238
+           UY    -0.089499629    0.342638028    0.020862154
+           UZ    -0.028908239    0.025266349    0.061048998
+
+           MEAN ALPHA POLARIZABILITY =     0.194005455
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.096486186    0.033429719    0.028122087
+           UY     0.043915818    0.438654643    0.188397128
+           UZ     0.028122087    0.143411961    0.210572704
+
+           MEAN ALPHA POLARIZABILITY =     0.248571177
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.096484939   -0.033428446    0.028121398
+           UY    -0.043914199    0.438656168   -0.188396658
+           UZ     0.028121397   -0.143411585    0.210573617
+
+           MEAN ALPHA POLARIZABILITY =     0.248571575
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.061046427    0.025261443    0.028902396
+           UY     0.020857962    0.342633167    0.089501422
+           UZ     0.028902396    0.108396297    0.178330108
+
+           MEAN ALPHA POLARIZABILITY =     0.194003234
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.210576154    0.143413000   -0.028117101
+           UY     0.188398611    0.438656529   -0.043907461
+           UZ    -0.028117103   -0.033423234    0.096483014
+
+           MEAN ALPHA POLARIZABILITY =     0.248571899
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     1.093181573    0.000000000    0.000000000
+           UY     0.000000000    3.126088438   -0.000000000
+           UZ     0.000000000   -0.000000000    1.093181573
+
+           MEAN ALPHA POLARIZABILITY =     1.770817194
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   0.1386505I (A.U.)
+ GMRES CONVERGED IN                    14 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000315266    0.000000000    0.000000000
+           UY     0.000000000    0.000929308    0.000000000
+           UZ     0.000000000    0.000000000    0.000315266
+
+           MEAN ALPHA POLARIZABILITY =     0.000519946
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.060589783   -0.024352900    0.028147377
+           UY    -0.020182127    0.332712138   -0.086603169
+           UZ     0.028147377   -0.104500070    0.174812571
+
+           MEAN ALPHA POLARIZABILITY =     0.189371497
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.174807684    0.104499569   -0.028153314
+           UY     0.086603020    0.332707641   -0.020187366
+           UZ    -0.028153314   -0.024359021    0.060593094
+
+           MEAN ALPHA POLARIZABILITY =     0.189369473
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.206472078   -0.138813411   -0.027395752
+           UY    -0.181397278    0.424710468    0.042271956
+           UZ    -0.027395751    0.032348366    0.095294863
+
+           MEAN ALPHA POLARIZABILITY =     0.242159136
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.174805727   -0.104500822   -0.028152118
+           UY    -0.086604570    0.332705336    0.020187317
+           UZ    -0.028152118    0.024358763    0.060592965
+
+           MEAN ALPHA POLARIZABILITY =     0.189368010
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.095298579    0.032357289    0.027403197
+           UY     0.042283538    0.424710473    0.181394694
+           UZ     0.027403197    0.138811296    0.206468689
+
+           MEAN ALPHA POLARIZABILITY =     0.242159247
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.095297369   -0.032356058    0.027402526
+           UY    -0.042281978    0.424711884   -0.181394252
+           UZ     0.027402526   -0.138810930    0.206469583
+
+           MEAN ALPHA POLARIZABILITY =     0.242159612
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.060590451    0.024354030    0.028146425
+           UY     0.020183270    0.332700773    0.086606304
+           UZ     0.028146425    0.104502613    0.174806466
+
+           MEAN ALPHA POLARIZABILITY =     0.189365897
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.206472055    0.138812302   -0.027398341
+           UY     0.181396125    0.424712216   -0.042275484
+           UZ    -0.027398342   -0.032351016    0.095295493
+
+           MEAN ALPHA POLARIZABILITY =     0.242159921
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     1.074648992    0.000000000    0.000000000
+           UY     0.000000000    3.030600237   -0.000000000
+           UZ     0.000000000   -0.000000000    1.074648992
+
+           MEAN ALPHA POLARIZABILITY =     1.726632740
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   0.2332227I (A.U.)
+ GMRES CONVERGED IN                    15 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000339250    0.000000000    0.000000000
+           UY     0.000000000    0.000974302    0.000000000
+           UZ     0.000000000    0.000000000    0.000339250
+
+           MEAN ALPHA POLARIZABILITY =     0.000550934
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.059457250   -0.022208152    0.026332106
+           UY    -0.018572630    0.309386998   -0.079696662
+           UZ     0.026332106   -0.095296810    0.166313626
+
+           MEAN ALPHA POLARIZABILITY =     0.178385958
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.166309027    0.095296354   -0.026337662
+           UY     0.079696529    0.309383186   -0.018577440
+           UZ    -0.026337661   -0.022213739    0.059460328
+
+           MEAN ALPHA POLARIZABILITY =     0.178384181
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.196532943   -0.127846447   -0.025665673
+           UY    -0.164928311    0.392112886    0.038434097
+           UZ    -0.025665672    0.029792685    0.092376733
+
+           MEAN ALPHA POLARIZABILITY =     0.227007521
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.166307175   -0.095297505   -0.026336544
+           UY    -0.079697943    0.309381418    0.018577387
+           UZ    -0.026336544    0.022213507    0.059460185
+
+           MEAN ALPHA POLARIZABILITY =     0.178382926
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.092380210    0.029800898    0.025672643
+           UY     0.038444641    0.392112839    0.164925945
+           UZ     0.025672643    0.127844507    0.196529769
+
+           MEAN ALPHA POLARIZABILITY =     0.227007606
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.092379090   -0.029799765    0.025672016
+           UY    -0.038443221    0.392113996   -0.164925561
+           UZ     0.025672016   -0.127844165    0.196530616
+
+           MEAN ALPHA POLARIZABILITY =     0.227007901
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.059457808    0.022209185    0.026331213
+           UY     0.018573683    0.309377521    0.079699537
+           UZ     0.026331213    0.095299142    0.166307841
+
+           MEAN ALPHA POLARIZABILITY =     0.178381057
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.196532929    0.127845433   -0.025668099
+           UY     0.164927252    0.392114264   -0.038437304
+           UZ    -0.025668099   -0.029795127    0.092377332
+
+           MEAN ALPHA POLARIZABILITY =     0.227008175
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     1.029695681    0.000000000    0.000000000
+           UY     0.000000000    2.806957410   -0.000000000
+           UZ     0.000000000   -0.000000000    1.029695681
+
+           MEAN ALPHA POLARIZABILITY =     1.622116257
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   0.3858973I (A.U.)
+ GMRES CONVERGED IN                    15 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000389231    0.000000000    0.000000000
+           UY     0.000000000    0.001055070    0.000000000
+           UZ     0.000000000    0.000000000    0.000389231
+
+           MEAN ALPHA POLARIZABILITY =     0.000611177
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.056897833   -0.017924244    0.022556761
+           UY    -0.015283307    0.262858618   -0.065581879
+           UZ     0.022556761   -0.076914258    0.148433769
+
+           MEAN ALPHA POLARIZABILITY =     0.156063407
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.148429773    0.076913893   -0.022561522
+           UY     0.065581775    0.262856018   -0.015287248
+           UZ    -0.022561522   -0.017928761    0.056900428
+
+           MEAN ALPHA POLARIZABILITY =     0.156062073
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.175445403   -0.105519608   -0.022047402
+           UY    -0.132213384    0.327770782    0.030810357
+           UZ    -0.022047402    0.024589759    0.085972847
+
+           MEAN ALPHA POLARIZABILITY =     0.196396344
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.148428138   -0.076914838   -0.022560568
+           UY    -0.065582915    0.262855156    0.015287191
+           UZ    -0.022560568    0.017928581    0.056900253
+
+           MEAN ALPHA POLARIZABILITY =     0.156061182
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.085975826    0.024596527    0.022053382
+           UY     0.030818825    0.327770660    0.132211462
+           UZ     0.022053382    0.105518021    0.175442677
+
+           MEAN ALPHA POLARIZABILITY =     0.196396388
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.085974893   -0.024595595    0.022052845
+           UY    -0.030817686    0.327771375   -0.132211181
+           UZ     0.022052845   -0.105517729    0.175443428
+
+           MEAN ALPHA POLARIZABILITY =     0.196396565
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.056898165    0.017925080    0.022555991
+           UY     0.015284175    0.262852443    0.065584222
+           UZ     0.022555991    0.076916164    0.148428657
+
+           MEAN ALPHA POLARIZABILITY =     0.156059755
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.175445410    0.105518785   -0.022049486
+           UY     0.132212518    0.327771538   -0.030812924
+           UZ    -0.022049487   -0.024591778    0.085973382
+
+           MEAN ALPHA POLARIZABILITY =     0.196396777
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     0.933884672    0.000000000    0.000000000
+           UY     0.000000000    2.363561660   -0.000000000
+           UZ     0.000000000   -0.000000000    0.933884672
+
+           MEAN ALPHA POLARIZABILITY =     1.410443668
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   0.6491140I (A.U.)
+ GMRES CONVERGED IN                    14 ITERATIONS
+ GMRES CONVERGED IN                    15 ITERATIONS
+ GMRES CONVERGED IN                    14 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000472710    0.000000000    0.000000000
+           UY     0.000000000    0.001151116    0.000000000
+           UZ     0.000000000    0.000000000    0.000472710
+
+           MEAN ALPHA POLARIZABILITY =     0.000698845
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.051706374   -0.011469419    0.016281577
+           UY    -0.010084242    0.189601413   -0.043272242
+           UZ     0.016281577   -0.049216143    0.117777459
+
+           MEAN ALPHA POLARIZABILITY =     0.119695082
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.117774482    0.049215915   -0.016285016
+           UY     0.043272173    0.189600284   -0.010086822
+           UZ    -0.016285016   -0.011472320    0.051708168
+
+           MEAN ALPHA POLARIZABILITY =     0.119694311
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.138791028   -0.070571693   -0.015974062
+           UY    -0.082786313    0.228798738    0.019292109
+           UZ    -0.015974062    0.016445682    0.073965264
+
+           MEAN ALPHA POLARIZABILITY =     0.147185010
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.117773210   -0.049216541   -0.016284331
+           UY    -0.043272892    0.189600398    0.010086769
+           UZ    -0.016284331    0.011472214    0.051707948
+
+           MEAN ALPHA POLARIZABILITY =     0.119693852
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.073967412    0.016450195    0.015978387
+           UY     0.019297418    0.228798572    0.082785086
+           UZ     0.015978387    0.070570648    0.138789050
+
+           MEAN ALPHA POLARIZABILITY =     0.147185011
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.073966789   -0.016449575    0.015978000
+           UY    -0.019296706    0.228798767   -0.082784931
+           UZ     0.015978000   -0.070570443    0.138789643
+
+           MEAN ALPHA POLARIZABILITY =     0.147185066
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.051706351    0.011469959    0.016281017
+           UY     0.010084810    0.189599142    0.043273743
+           UZ     0.016281017    0.049217397    0.117773494
+
+           MEAN ALPHA POLARIZABILITY =     0.119692995
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.138791072    0.070571159   -0.015975571
+           UY     0.082785752    0.228798829   -0.019293712
+           UZ    -0.015975572   -0.016447035    0.073965692
+
+           MEAN ALPHA POLARIZABILITY =     0.147185198
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     0.764949428    0.000000000    0.000000000
+           UY     0.000000000    1.674747259   -0.000000000
+           UZ     0.000000000   -0.000000000    0.764949428
+
+           MEAN ALPHA POLARIZABILITY =     1.068215371
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   1.1539038I (A.U.)
+ GMRES CONVERGED IN                    13 ITERATIONS
+ GMRES CONVERGED IN                    14 ITERATIONS
+ GMRES CONVERGED IN                    13 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000578096    0.000000000    0.000000000
+           UY     0.000000000    0.001186977    0.000000000
+           UZ     0.000000000    0.000000000    0.000578096
+
+           MEAN ALPHA POLARIZABILITY =     0.000781057
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.041994817   -0.005284170    0.008905124
+           UY    -0.004737887    0.105994835   -0.020330612
+           UZ     0.008905124   -0.022674781    0.078132057
+
+           MEAN ALPHA POLARIZABILITY =     0.075373903
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.078130325    0.022674681   -0.008907006
+           UY     0.020330571    0.105994687   -0.004739087
+           UZ    -0.008907006   -0.005285513    0.041995699
+
+           MEAN ALPHA POLARIZABILITY =     0.075373570
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.090715213   -0.034667153   -0.008756107
+           UY    -0.035130219    0.121176106    0.008186573
+           UZ    -0.008756107    0.008078669    0.055181281
+
+           MEAN ALPHA POLARIZABILITY =     0.089024200
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.078129515   -0.022674985   -0.008906632
+           UY    -0.020330878    0.105995207    0.004739049
+           UZ    -0.008906632    0.005285470    0.041995463
+
+           MEAN ALPHA POLARIZABILITY =     0.075373395
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.055182450    0.008080878    0.008758475
+           UY     0.008188820    0.121175984    0.035129688
+           UZ     0.008758475    0.034666649    0.090714123
+
+           MEAN ALPHA POLARIZABILITY =     0.089024186
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.055182177   -0.008080576    0.008758264
+           UY    -0.008188519    0.121175882   -0.035129626
+           UZ     0.008758264   -0.034666544    0.090714514
+
+           MEAN ALPHA POLARIZABILITY =     0.089024191
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.041994481    0.005284423    0.008904816
+           UY     0.004738145    0.105994962    0.020331264
+           UZ     0.008904816    0.022675386    0.078129561
+
+           MEAN ALPHA POLARIZABILITY =     0.075373001
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.090715293    0.034666901   -0.008756934
+           UY     0.035129968    0.121175899   -0.008187250
+           UZ    -0.008756934   -0.008079336    0.055181573
+
+           MEAN ALPHA POLARIZABILITY =     0.089024255
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     0.532622367    0.000000000    0.000000000
+           UY     0.000000000    0.909870541   -0.000000000
+           UZ     0.000000000   -0.000000000    0.532622367
+
+           MEAN ALPHA POLARIZABILITY =     0.658371758
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   2.3075922I (A.U.)
+ GMRES CONVERGED IN                    11 ITERATIONS
+ GMRES CONVERGED IN                    11 ITERATIONS
+ GMRES CONVERGED IN                    11 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000691019    0.000000000    0.000000000
+           UY     0.000000000    0.001107282    0.000000000
+           UZ     0.000000000    0.000000000    0.000691019
+
+           MEAN ALPHA POLARIZABILITY =     0.000829774
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.024903079   -0.001789851    0.003282903
+           UY    -0.001535592    0.040095266   -0.006589328
+           UZ     0.003282903   -0.007680387    0.038225188
+
+           MEAN ALPHA POLARIZABILITY =     0.034407844
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.038224490    0.007680354   -0.003283596
+           UY     0.006589308    0.040095331   -0.001535976
+           UZ    -0.003283596   -0.001790306    0.024903344
+
+           MEAN ALPHA POLARIZABILITY =     0.034407722
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.042684057   -0.011848707   -0.003228892
+           UY    -0.009773832    0.043166099    0.002277647
+           UZ    -0.003228892    0.002761167    0.029580605
+
+           MEAN ALPHA POLARIZABILITY =     0.038476920
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.038224126   -0.007680457   -0.003283459
+           UY    -0.006589394    0.040095629    0.001535960
+           UZ    -0.003283459    0.001790291    0.024903192
+
+           MEAN ALPHA POLARIZABILITY =     0.034407649
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.029581034    0.002761921    0.003229765
+           UY     0.002278269    0.043166053    0.009773682
+           UZ     0.003229765    0.011848535    0.042683653
+
+           MEAN ALPHA POLARIZABILITY =     0.038476913
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.029580980   -0.002761818    0.003229687
+           UY    -0.002278186    0.043165966   -0.009773663
+           UZ     0.003229687   -0.011848499    0.042683843
+
+           MEAN ALPHA POLARIZABILITY =     0.038476929
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.024902765    0.001789937    0.003282789
+           UY     0.001535670    0.040095654    0.006589513
+           UZ     0.003282789    0.007680593    0.038224078
+
+           MEAN ALPHA POLARIZABILITY =     0.034407499
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.042684131    0.011848621   -0.003229197
+           UY     0.009773757    0.043165974   -0.002277834
+           UZ    -0.003229197   -0.002761395    0.029580758
+
+           MEAN ALPHA POLARIZABILITY =     0.038476954
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     0.271475681    0.000000000    0.000000000
+           UY     0.000000000    0.334153254   -0.000000000
+           UZ     0.000000000   -0.000000000    0.271475681
+
+           MEAN ALPHA POLARIZABILITY =     0.292368205
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY   5.9576432I (A.U.)
+ GMRES CONVERGED IN                     9 ITERATIONS
+ GMRES CONVERGED IN                     9 ITERATIONS
+ GMRES CONVERGED IN                     9 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000691512    0.000000000    0.000000000
+           UY     0.000000000    0.000904274    0.000000000
+           UZ     0.000000000    0.000000000    0.000691512
+
+           MEAN ALPHA POLARIZABILITY =     0.000762433
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.006379488   -0.000371697    0.000619933
+           UY    -0.000282014    0.007571045   -0.001210140
+           UZ     0.000619933   -0.001594980    0.008895193
+
+           MEAN ALPHA POLARIZABILITY =     0.007615242
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.008895054    0.001594971   -0.000620064
+           UY     0.001210135    0.007571062   -0.000282084
+           UZ    -0.000620064   -0.000371791    0.006379532
+
+           MEAN ALPHA POLARIZABILITY =     0.007615216
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.009458157   -0.002149191   -0.000610946
+           UY    -0.001602062    0.007916849    0.000373337
+           UZ    -0.000610946    0.000500837    0.006978825
+
+           MEAN ALPHA POLARIZABILITY =     0.008117943
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.008894979   -0.001594990   -0.000620038
+           UY    -0.001210149    0.007571120    0.000282081
+           UZ    -0.000620038    0.000371787    0.006379496
+
+           MEAN ALPHA POLARIZABILITY =     0.007615198
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.006978906    0.000500974    0.000611111
+           UY     0.000373439    0.007916841    0.001602037
+           UZ     0.000611111    0.002149160    0.009458080
+
+           MEAN ALPHA POLARIZABILITY =     0.008117942
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.006978903   -0.000500955    0.000611096
+           UY    -0.000373425    0.007916824   -0.001602034
+           UZ     0.000611096   -0.002149152    0.009458124
+
+           MEAN ALPHA POLARIZABILITY =     0.008117950
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.006379408    0.000371713    0.000619911
+           UY     0.000282027    0.007571130    0.001210170
+           UZ     0.000619911    0.001595017    0.008894962
+
+           MEAN ALPHA POLARIZABILITY =     0.007615166
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.009458179    0.002149174   -0.000611003
+           UY     0.001602049    0.007916826   -0.000373367
+           UZ    -0.000611003   -0.000500879    0.006978862
+
+           MEAN ALPHA POLARIZABILITY =     0.008117956
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     0.064114586    0.000000000    0.000000000
+           UY     0.000000000    0.062855971   -0.000000000
+           UZ     0.000000000   -0.000000000    0.064114586
+
+           MEAN ALPHA POLARIZABILITY =     0.063695048
+
+ COMPUTING DYNAMIC POLARIZABILTY FOR IMAGINARY FREQUENCY  32.2390801I (A.U.)
+ GMRES CONVERGED IN                     6 ITERATIONS
+ GMRES CONVERGED IN                     7 ITERATIONS
+ GMRES CONVERGED IN                     6 ITERATIONS
+
+          -----------------------------------
+           LOCALIZED ALPHA POLARIZABILITIES 
+                 IN ANGSTROMS**3            
+          -----------------------------------
+
+           CORE ALPHA POLARIZABILITY TENSOR 
+                      UX             UY             UZ
+           UX     0.000145654    0.000000000    0.000000000
+           UY     0.000000000    0.000191772    0.000000000
+           UZ     0.000000000    0.000000000    0.000145654
+
+           MEAN ALPHA POLARIZABILITY =     0.000161026
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.000249600   -0.000014374    0.000022569
+           UY    -0.000010279    0.000274323   -0.000044109
+           UZ     0.000022569   -0.000061681    0.000341187
+
+           MEAN ALPHA POLARIZABILITY =     0.000288370
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.000341182    0.000061680   -0.000022574
+           UY     0.000044109    0.000274324   -0.000010282
+           UZ    -0.000022574   -0.000014378    0.000249602
+
+           MEAN ALPHA POLARIZABILITY =     0.000288369
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.000356400   -0.000077042   -0.000022270
+           UY    -0.000056515    0.000286462    0.000013170
+           UZ    -0.000022270    0.000017953    0.000266025
+
+           MEAN ALPHA POLARIZABILITY =     0.000302962
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  2
+                      UX             UY             UZ
+           UX     0.000341179   -0.000061681   -0.000022573
+           UY    -0.000044109    0.000274326    0.000010282
+           UZ    -0.000022573    0.000014378    0.000249600
+
+           MEAN ALPHA POLARIZABILITY =     0.000288368
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.000266028    0.000017958    0.000022276
+           UY     0.000013174    0.000286462    0.000056514
+           UZ     0.000022276    0.000077041    0.000356398
+
+           MEAN ALPHA POLARIZABILITY =     0.000302962
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  2
+                      UX             UY             UZ
+           UX     0.000266028   -0.000017958    0.000022275
+           UY    -0.000013173    0.000286461   -0.000056514
+           UZ     0.000022275   -0.000077040    0.000356399
+
+           MEAN ALPHA POLARIZABILITY =     0.000302963
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR BOND BETWEEN ATOM  1 AND ATOM  3
+                      UX             UY             UZ
+           UX     0.000249597    0.000014375    0.000022569
+           UY     0.000010280    0.000274326    0.000044110
+           UZ     0.000022569    0.000061682    0.000341178
+
+           MEAN ALPHA POLARIZABILITY =     0.000288367
+
+
+  LMO ALPHA POLARIZABILITY TENSOR FOR CORE OR LONE PAIR ON ATOM  3
+                      UX             UY             UZ
+           UX     0.000356401    0.000077041   -0.000022272
+           UY     0.000056514    0.000286461   -0.000013171
+           UZ    -0.000022272   -0.000017955    0.000266026
+
+           MEAN ALPHA POLARIZABILITY =     0.000302963
+
+
+               -----------------------------------
+                TOTAL ALPHA POLARIZABILITY TENSOR 
+               -----------------------------------
+                      UX             UY             UZ
+           UX     0.002572068    0.000000000    0.000000000
+           UY     0.000000000    0.002434917   -0.000000000
+           UZ     0.000000000   -0.000000000    0.002572068
+
+           MEAN ALPHA POLARIZABILITY =     0.002526351
+
+ ...... DONE WITH CPHF CONTRIBUTIONS ......
+ CPU     0: STEP CPU TIME=     0.12 TOTAL CPU TIME=          2.9 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          3.0 SECONDS, CPU UTILIZATION IS    97.44%
+
+ RUNTYP=MAKEFP IS NOW GENERATING EXCHANGE REPULSION DATA
+               AND CHARGE TRANSFER DATA.
+
+ FORMING VIRTUAL VALENCE ORBITALS FOR RHF...
+ THE ATOMS POSSESS    3 CHEMICAL CORES, AND   12 VALENCE ORBITALS.
+ THIS MOLECULE HAS    8 OCCUPIED VALENCE ORBITALS,
+ SO WE ARE SEEKING    4  VIRTUAL VALENCE ORBITALS FROM
+ WITHIN THE MOLECULE'S VIRTUAL SPACE OF DIMENSION   31
+
+ THERE SHOULD BE A CLEAR DROPOFF IN THE EIGENVALUES OF -B- BETWEEN THE
+ VALENCE VIRTUAL AND EXTERNAL VIRTUAL ORBITALS, PLEASE CHECK THIS.
+ LAST FEW SVD EIGENVALUES KEPT AS VALENCE:
+    0.9994248871   0.9994248871   0.9991814618   0.9976119785
+ FIRST FEW SVD EIGENVALUES REJECTED AS EXTERNAL:
+    0.1920265519   0.1575618165   0.1056165932   0.1056165932   0.0990483335
+
+ THE QUASIATOMIC MINIMAL-BASIS-SET ORBITALS (QUAMBO'S) HAVE BEEN PUNCHED.
+ THE   15 QUAMBO'S ARE MOLECULAR ORBITALS WHICH
+    A) ARE MUTUALLY ORTHONORMAL,
+    B) SPAN THE   11 DIMENSIONAL OCCUPIED ORBITAL SPACE OF THIS MOLECULE
+       EXACTLY, AND    4 ADDITIONAL VALENCE VIRTUAL ORBITALS,
+    C) ARE AS CLOSE AS POSSIBLE TO THE FREE ATOM AO'S (IN THE SENSE OF 
+       MAXIMUM OVERLAP), WHILE SATISFYING "A" AND "B".
+
+ USING THE RHF FOCK MATRIX TO CANONICALIZE THE VVOS.
+
+ VIRTUAL VALENCE ORBITAL GENERATION IS FINISHED.
+ THE VIRTUAL VALENCE ORBITALS ARE A QUANTIFICATION OF THE FRONTIER ORBITAL
+ SPACE (I.E. LUMO, LUMO+1, ...) WITHIN THE HARTREE-FOCK APPROXIMATION.
+ THE   11 OCCUPIED AND   31 VIRTUAL ORBITALS PRINTED BELOW ARE
+      FIRST, THE OCCUPIED CANONICAL ORBITALS (    1-   11)
+     SECOND, THE VIRTUAL VALENCE ORBITALS    (   12-   15)
+      THIRD, THE EXTERNAL VIRTUAL ORBITALS   (   16-   42)
+ NOTE THAT THE VIRTUAL SPACE IS ONLY SEMI-CANONICALIZED, MEANING THAT
+ THE FOCK OPERATOR IS DIAGONAL ONLY WITHIN ITS VALENCE AND EXTERNAL
+ VIRTUAL SUBBLOCKS.  THE VIRTUAL "EIGENVALUES" BELOW ARE THESE DIAGONALS,
+ WHICH ARE EXPECTATION VALUES OF THE FOCK OPERATOR, NOT ITS EIGENVALUES.
+ RUNTYP=MAKEFP HAS JUST FINISHED DOING THAT.
+
+ RUNTYP=MAKEFP IS NOW GENERATING SCREENING PARAMETERS.
+
+
+     ---------------------------------------
+     EFFECTIVE POTENTIAL SCREENING PARAMETER
+              OPTIMIZATION PROGRAM
+     ---------------------------------------
+     AUTHORS: WALT STEVENS, MARK FREITAG, LYUDMILA SLIPCHENKO
+
+ THE $DAMP INPUT DATA FOR THIS RUN IS:
+ ISCCHG =     0
+ THRSH  = 100.0
+ MAXIT  =    30
+ NMAIN  =     3
+ INITIAL FIT WILL USE EXP. CH-CH  FORM WITH    FIXED LINEAR COEFICIENTS
+  SECOND FIT WILL USE    GAUSSIAN FORM WITH    FIXED LINEAR COEFICIENTS
+
+ THE CLASSICAL MULTIPOLE EXPANSION TO BE SCREENED IS
+
+ CENTERS OF THE DISTRIBUTED MULTIPOLE EXPANSION, X,Y,Z
+     C         -0.00000   0.00000  -0.00000
+     O         -0.00000  -2.23128   0.00000
+     O         -0.00000   2.23128   0.00000
+     BO21      -0.00000  -1.11564  -0.00000
+     BO31      -0.00000   1.11564  -0.00000
+
+ CHARGES             Q
+     C         -3.80723
+     O         -8.00925
+     O         -8.00925
+     BO21      -1.08714
+     BO31      -1.08714
+
+ DIPOLES             X         Y         Z
+     C         -0.00000  -0.00000   0.00000
+     O          0.00000   0.43566  -0.00000
+     O          0.00000  -0.43566  -0.00000
+     BO21       0.00000  -0.13490   0.00000
+     BO31      -0.00000   0.13490   0.00000
+
+ QUADRUPOLES        XX        YY        ZZ        XY        XZ        YZ
+     C         -1.36670  -1.37968  -1.36670  -0.00000  -0.00000  -0.00000
+     O         -3.92129  -3.39664  -3.92129   0.00000   0.00000  -0.00000
+     O         -3.92129  -3.39664  -3.92129  -0.00000   0.00000   0.00000
+     BO21      -0.84065  -0.37358  -0.84065  -0.00000  -0.00000  -0.00000
+     BO31      -0.84065  -0.37358  -0.84065   0.00000  -0.00000   0.00000
+
+ OCTUPOLES
+     C         -0.00000   0.00000   0.00000   0.00000   0.00000
+               -0.00000   0.00000  -0.00000  -0.00000  -0.00000
+     O          0.00000   0.86114  -0.00000   0.25521  -0.00000
+                0.00000  -0.00000   0.00000   0.25521   0.00000
+     O          0.00000  -0.86114  -0.00000  -0.25521  -0.00000
+                0.00000  -0.00000   0.00000  -0.25521  -0.00000
+     BO21       0.00000  -0.36802   0.00000  -0.12348   0.00000
+                0.00000   0.00000   0.00000  -0.12348   0.00000
+     BO31      -0.00000   0.36802   0.00000   0.12348   0.00000
+               -0.00000   0.00000  -0.00000   0.12348  -0.00000
+
+
+                         *****   WARNING   *****
+ NO $DAMPGS CHARGE PENETRATION SCREENING INPUT WAS FOUND, CONTINUING...
+   THIS INPUT GROUP LETS YOU ASSIGN EXACTLY EQUAL SCREENING EXPONENTS
+   TO ANY SYMMETRY EQUIVALENT ATOMS AND BOND CENTERS, AND IT IS USUALLY
+   A VERY GOOD IDEA TO ENTER THIS DATA.
+
+
+ NUMBER OF OPTIMIZED PARAMETERS IS   5
+
+ INITIAL VALUES OF SCREENING PARAMETERS ARE:
+ NAME        COEF       EXP
+ C          1.00000   2.00000
+ O          1.00000   2.00000
+ O          1.00000   2.00000
+ BO21       1.00000   4.00000
+ BO31       1.00000   4.00000
+
+ QUANTUM ELECTROSTATIC POTENTIAL GRID IS GENERATED BY $PDC PTSEL=GEODESIC
+ POINT SELECTION IS USING VDWSCL=  0.700
+  MEMORY FOR PDCPTS:                307816
+ GAVEZZOTTI RADII USED FOR CHARGE FITTING
+          EFP CENTER      VDW RADIUS
+          C               2.83 BOHR
+          O               2.65 BOHR
+          O               2.65 BOHR
+ RADIUS FOR BOND MID-POINT BETWEEN ATOMS  2 AND  1
+          BO21            2.74 BOHR
+ RADIUS FOR BOND MID-POINT BETWEEN ATOMS  3 AND  1
+          BO31            2.74 BOHR
+ {3,5+}NH,NK TEMPLATE USED, NH= 3 NK= 0
+ NUMBER OF POINTS SELECTED FOR FITTING =    3372
+
+  TO SIMULATE EVEN POINT DENSITY IN GEODES GRID
+  TOTAL NUMBER OF POINTS WAS ARTIFICIALLY INCREASED
+  TO      25598
+ DAMPING COMPUTATION NEEDS       37197 WORDS
+ PLUS       227070 WORDS
+
+ ----- THE ELECTROSTATIC POTENTIAL GRID CONTAINS     3372 POINTS -----
+ ----- THE QUANTUM POTENTIAL HAS BEEN GENERATED ON THE GRID -----
+ ----- THE UNSCREENED CLASSICAL POTENTIAL GRID HAS BEEN GENERATED -----
+ ELECTROSTATIC POTENTIAL CPU TIME: QUANTUM=     0.0, CLASSICAL=    0.00
+
+ *** SINGLE EXPONENTIAL USED AS DAMPING FUNCTION ***
+  CHARGE-CHARGE SCREENING WILL BE PERFORMED 
+
+ FITTING SCREENED MULTIPOLE CLASSICAL POTENTIAL TO THE QUANTUM POTENTIAL...
+  INITIAL ALPHAS ARE    2.000   2.000   2.000   4.000   4.000
+ INITIAL CHI^2 =       0.89314616
+ POWELL PROCEDURE, ITERATION      1 CHI^2 =       0.70053512
+ POWELL PROCEDURE, ITERATION      2 CHI^2 =       0.65893480
+ POWELL PROCEDURE, ITERATION      3 CHI^2 =       0.64172631
+ POWELL PROCEDURE, ITERATION      4 CHI^2 =       0.62475585
+ POWELL PROCEDURE, ITERATION      5 CHI^2 =       0.62276336
+ POWELL PROCEDURE, ITERATION      6 CHI^2 =       0.61771686
+ POWELL PROCEDURE, ITERATION      7 CHI^2 =       0.61624571
+ POWELL PROCEDURE, ITERATION      8 CHI^2 =       0.61599287
+ POWELL PROCEDURE, ITERATION      9 CHI^2 =       0.61412870
+ POWELL PROCEDURE, ITERATION     10 CHI^2 =       0.61391469
+ POWELL PROCEDURE, ITERATION     11 CHI^2 =       0.61357455
+ FUNCTION WAS EVALUATED    755 TIMES
+ POWELL MINIMIZATION PROCEDURE CONVERGED IN    12 ITERATIONS
+ ENDING VALUE OF CHI^2 IS      0.61357398
+ OPTIMIZED NONLINEAR PARAMETERS ARE
+    2.3874   2.0787   2.0787   1.7686   1.7686
+ POWELL PROCEDURE REQUIRED     0.2 SECONDS
+
+               ----- OPTIMIZED SCREENING PARAMETERS ----- 
+ NAME          X        Y        Z               COEF                 ALPHA
+ C         -0.0000   0.0000  -0.0000         1.0000000000         2.3873573979
+ O         -0.0000  -2.2313   0.0000         1.0000000000         2.0787055520
+ O         -0.0000   2.2313   0.0000         1.0000000000         2.0787217695
+ BO21      -0.0000  -1.1156  -0.0000         1.0000000000         1.7686144588
+ BO31      -0.0000   1.1156  -0.0000         1.0000000000         1.7686320149
+
+ STATISTICS FOR UNSCREENED MULTIPOLES
+ ------------------------------------
+ AVERAGE UNSIGNED ERROR        (      3372 PTS) = 5.843154E+00
+ RMS DEVIATION                 (      3372 PTS) = 1.588976E+01
+ RMS DEVIATION (ERR > THRSH/8) (       464 PTS) = 4.251464E+01
+ RMS DEVIATION (ERR > THRSH/4) (       312 PTS) = 5.051338E+01
+ RMS DEVIATION (ERR > THRSH/2) (       136 PTS) = 6.599100E+01
+ RMS DEVIATION (ERR > THRSH)   (         0 PTS) = 0.000000E+00
+ 
+ EFFECTIVE AV. UNSIGNED ERROR  (     25598 PTS) = 7.697131E-01
+ EFFECTIVE RMS DEVIATION       (     25598 PTS) = 5.766367E+00
+
+
+ STATISTICS FOR SCREENED MULTIPOLES
+ ----------------------------------
+ AVERAGE UNSIGNED ERROR        (      3372 PTS) = 7.077769E-01
+ RMS DEVIATION                 (      3372 PTS) = 1.414947E+00
+ RMS DEVIATION (ERR > THRSH/8) (         0 PTS) = 0.000000E+00
+ RMS DEVIATION (ERR > THRSH/4) (         0 PTS) = 0.000000E+00
+ RMS DEVIATION (ERR > THRSH/2) (         0 PTS) = 0.000000E+00
+ RMS DEVIATION (ERR > THRSH)   (         0 PTS) = 0.000000E+00
+ 
+ EFFECTIVE AV. UNSIGNED ERROR  (     25598 PTS) = 9.323477E-02
+ EFFECTIVE RMS DEVIATION       (     25598 PTS) = 5.134816E-01
+
+
+ GRID POINTS WITH ERRORS (QUANTUM - EITHER FIT) GREATER THAN  100.00 KCAL/MOL
+   POINT  CENTER  DISTANCE   X     Y       Z    QUANTUM      DIFF      DIFF   
+                  FROM ORIGIN                              SCREEN  NOSCREEN
+
+ ..... DONE WITH CHARGE PENETRATION SCREENING .....
+ CPU     0: STEP CPU TIME=     0.20 TOTAL CPU TIME=          3.1 (      0.1 MIN)
+ TOTAL WALL CLOCK TIME=          3.4 SECONDS, CPU UTILIZATION IS    90.17%
+
+ *** SINGLE GAUSSIAN USED AS DAMPING FUNCTION ***
+
+ FITTING SCREENED MULTIPOLE CLASSICAL POTENTIAL TO THE QUANTUM POTENTIAL...
+  INITIAL ALPHAS ARE    1.084   1.084   1.084   4.335   4.335
+ INITIAL CHI^2 =       2.21561627
+ POWELL PROCEDURE, ITERATION      1 CHI^2 =       1.75804141
+ POWELL PROCEDURE, ITERATION      2 CHI^2 =       1.69024714
+ POWELL PROCEDURE, ITERATION      3 CHI^2 =       1.63503606
+ POWELL PROCEDURE, ITERATION      4 CHI^2 =       1.58893694
+ POWELL PROCEDURE, ITERATION      5 CHI^2 =       1.57482520
+ POWELL PROCEDURE, ITERATION      6 CHI^2 =       1.56212726
+ POWELL PROCEDURE, ITERATION      7 CHI^2 =       1.56017356
+ POWELL PROCEDURE, ITERATION      8 CHI^2 =       1.54747878
+ POWELL PROCEDURE, ITERATION      9 CHI^2 =       1.54447173
+ POWELL PROCEDURE, ITERATION     10 CHI^2 =       1.49741000
+ POWELL PROCEDURE, ITERATION     11 CHI^2 =       1.48287949
+ POWELL PROCEDURE, ITERATION     12 CHI^2 =       1.48197196
+ POWELL PROCEDURE, ITERATION     13 CHI^2 =       1.47387968
+ POWELL PROCEDURE, ITERATION     14 CHI^2 =       1.46437745
+ POWELL PROCEDURE, ITERATION     15 CHI^2 =       1.46387697
+ POWELL PROCEDURE, ITERATION     16 CHI^2 =       1.46083860
+ POWELL PROCEDURE, ITERATION     17 CHI^2 =       1.45971216
+ POWELL PROCEDURE, ITERATION     18 CHI^2 =       1.45946114
+ POWELL PROCEDURE, ITERATION     19 CHI^2 =       1.45945332
+ POWELL PROCEDURE, ITERATION     20 CHI^2 =       1.45945048
+ POWELL PROCEDURE, ITERATION     21 CHI^2 =       1.45944586
+ POWELL PROCEDURE, ITERATION     22 CHI^2 =       1.45943455
+ POWELL PROCEDURE, ITERATION     23 CHI^2 =       1.45937596
+ POWELL PROCEDURE, ITERATION     24 CHI^2 =       1.45935600
+ POWELL PROCEDURE, ITERATION     25 CHI^2 =       1.45934000
+ POWELL PROCEDURE, ITERATION     26 CHI^2 =       1.45933820
+ POWELL PROCEDURE, ITERATION     27 CHI^2 =       1.45933158
+ POWELL PROCEDURE, ITERATION     28 CHI^2 =       1.45932783
+ POWELL PROCEDURE, ITERATION     29 CHI^2 =       1.45931157
+ FUNCTION WAS EVALUATED   1951 TIMES
+ POWELL MINIMIZATION PROCEDURE CONVERGED IN    30 ITERATIONS
+ ENDING VALUE OF CHI^2 IS      1.45930890
+ OPTIMIZED NONLINEAR PARAMETERS ARE
+    3.1604   1.1093   1.1093   0.6246   0.6247
+ POWELL PROCEDURE REQUIRED     0.4 SECONDS
+
+               ----- OPTIMIZED SCREENING PARAMETERS ----- 
+ NAME          X        Y        Z               COEF                 ALPHA
+ C         -0.0000   0.0000  -0.0000         1.0000000000         3.1603816166
+ O         -0.0000  -2.2313   0.0000         1.0000000000         1.1092706174
+ O         -0.0000   2.2313   0.0000         1.0000000000         1.1092985564
+ BO21      -0.0000  -1.1156  -0.0000         1.0000000000         0.6245971576
+ BO31      -0.0000   1.1156  -0.0000         1.0000000000         0.6246628888
+
+ STATISTICS FOR UNSCREENED MULTIPOLES
+ ------------------------------------
+ AVERAGE UNSIGNED ERROR        (      3372 PTS) = 5.843154E+00
+ RMS DEVIATION                 (      3372 PTS) = 1.588976E+01
+ RMS DEVIATION (ERR > THRSH/8) (       464 PTS) = 4.251464E+01
+ RMS DEVIATION (ERR > THRSH/4) (       312 PTS) = 5.051338E+01
+ RMS DEVIATION (ERR > THRSH/2) (       136 PTS) = 6.599100E+01
+ RMS DEVIATION (ERR > THRSH)   (         0 PTS) = 0.000000E+00
+ 
+ EFFECTIVE AV. UNSIGNED ERROR  (     25598 PTS) = 7.697131E-01
+ EFFECTIVE RMS DEVIATION       (     25598 PTS) = 5.766367E+00
+
+
+ STATISTICS FOR SCREENED MULTIPOLES
+ ----------------------------------
+ AVERAGE UNSIGNED ERROR        (      3372 PTS) = 1.467173E+00
+ RMS DEVIATION                 (      3372 PTS) = 3.384791E+00
+ RMS DEVIATION (ERR > THRSH/8) (        56 PTS) = 1.458888E+01
+ RMS DEVIATION (ERR > THRSH/4) (         0 PTS) = 0.000000E+00
+ RMS DEVIATION (ERR > THRSH/2) (         0 PTS) = 0.000000E+00
+ RMS DEVIATION (ERR > THRSH)   (         0 PTS) = 0.000000E+00
+ 
+ EFFECTIVE AV. UNSIGNED ERROR  (     25598 PTS) = 1.932693E-01
+ EFFECTIVE RMS DEVIATION       (     25598 PTS) = 1.228334E+00
+
+
+ GRID POINTS WITH ERRORS (QUANTUM - EITHER FIT) GREATER THAN  100.00 KCAL/MOL
+   POINT  CENTER  DISTANCE   X     Y       Z    QUANTUM      DIFF      DIFF   
+                  FROM ORIGIN                              SCREEN  NOSCREEN
+
+ ..... DONE WITH CHARGE PENETRATION SCREENING .....
+ CPU     0: STEP CPU TIME=     0.43 TOTAL CPU TIME=          3.5 (      0.1 MIN)
+ TOTAL WALL CLOCK TIME=          4.5 SECONDS, CPU UTILIZATION IS    78.17%
+
+ PROCESSING $STONE INPUT...
+ THE NUMBER OF "BOUNDARY" CORE MOS IS  0
+ THE NUMBER OF MOS WITH ZERO OCCUPATION NUMBER IS  0
+  
+  ****************************************
+  MULTIPOLE EXPANSION FOR EVERY LMO AT ITS
+  CENTROID USING ITS OWN ELECTRON DENSITY 
+     - NANDUN THELLAMUREGE AND HUI LI -   
+  ****************************************
+  
+ MULTIPOLE EXPANSION FOR LMO             1
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO             2
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO             3
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO             4
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO             5
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO             6
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO             7
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO             8
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO             9
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO            10
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+ MULTIPOLE EXPANSION FOR LMO            11
+ TOTAL ELECTRON CHARGE =     -2.0000000000
+  
+  DONE WITH LMO EXPANSION.
+ CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          3.5 (      0.1 MIN)
+ TOTAL WALL CLOCK TIME=          4.5 SECONDS, CPU UTILIZATION IS    77.83%
+              1204069  WORDS OF DYNAMIC MEMORY USED
+ EXECUTION OF GAMESS TERMINATED NORMALLY 14:17:25 05-OCT-2022    
+ DDI: 289344 bytes (0.3 MB / 0 MWords) used by master data server.
+
+ ----------------------------------------
+ CPU timing information for all processes
+ ========================================
+ 0: 3.100 + 0.438 = 3.539
+ 1: 2.101 + 0.225 = 2.327
+ 2: 2.299 + 0.200 = 2.499
+ 3: 2.73 + 0.171 = 2.245
+ 4: 3.28 + 0.269 = 3.297
+ 5: 2.142 + 0.139 = 2.282
+ 6: 2.163 + 0.204 = 2.367
+ 7: 2.823 + 0.106 = 2.930
+ 8: 2.863 + 0.334 = 3.197
+ 9: 2.992 + 0.74 = 3.67
+ 10: 2.871 + 0.174 = 3.45
+ 11: 2.280 + 0.102 = 2.382
+ 12: 2.883 + 0.285 = 3.168
+ 13: 2.281 + 0.106 = 2.387
+ 14: 2.661 + 0.164 = 2.826
+ 15: 2.280 + 0.94 = 2.374
+ ----------------------------------------
+ ddikick.x: exited gracefully.
+----- accounting info -----
+Files used on the master node jackson-t-ripper were:
+-rw-rw-r-- 1 jackson jackson     452 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F05
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.001
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.002
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.003
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.004
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.005
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.006
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.007
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.008
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.009
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.010
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.011
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.012
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.013
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.014
+-rw-rw-r-- 1 jackson jackson  900080 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F08.015
+-rw-rw-r-- 1 jackson jackson  187248 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.001
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.002
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.003
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.004
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.005
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.006
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.007
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.008
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.009
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.010
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.011
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.012
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.013
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.014
+-rw-rw-r-- 1 jackson jackson  180016 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F09.015
+-rw-rw-r-- 1 jackson jackson 2519440 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F10
+-rw-rw-r-- 1 jackson jackson  930256 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F16
+-rw-rw-r-- 1 jackson jackson  930256 Oct  5 14:17 /home/jackson/chem_580_gamess/scratch/CO2-makefp.F67
+Wed 05 Oct 2022 02:17:27 PM CDT
+1.2u 2.8s 0:09.63 42.0% 0+0k 744+56io 3pf+0w

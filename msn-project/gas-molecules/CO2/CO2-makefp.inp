@@ -1,0 +1,14 @@
+ $SYSTEM MWORDS=100 memddi=100 $END
+ $CONTRL   MULT=1   UNITS=ANGS SCFTYP=RHF  RUNTYP=MAKEFP
+   EXETYP=RUN   MAXIT=50  NPRINT=8 ispher=1 $END
+ $BASIS GBASIS=N31 NGAUSS=6 NDFUNC=1     $END
+ $mp2    code=rimp2 $end
+ $rimp2  othaux=.f. ivmtd=0 gosmp=.f. usedm=.f. $end
+ $auxbas cabnam=CCD $end
+ $DATA
+   CO2 Make EFP
+ CnV 2
+
+ C           6.0  -0.0000000000   0.0000000000  -0.0000000002
+ O           8.0  -0.0000000000   1.1807411415   0.0000000001
+ $END

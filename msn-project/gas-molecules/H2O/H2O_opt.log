@@ -1,0 +1,11 @@
+No scheduler so we must be running locally on jackson-t-ripper
+Input file supplied : ./msn-project/gas-molecules/H2O_opt.inp
+----- GAMESS execution script 'rungms-dev' -----
+This job is running on host jackson-t-ripper
+under operating system Linux at Fri 30 Sep 2022 03:59:39 PM CDT with sockets communication mode
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem     1K-blocks      Used Available Use% Mounted on
+/dev/nvme0n1p2 490617784 224988448 240633856  49% /
+GAMESS temporary binary files will be written to /home/jackson/chem_580_gamess/scratch
+GAMESS supplementary output files will be written to /home/jackson/restart
+Copying input file H2O_opt.inp to your run's scratch directory...
